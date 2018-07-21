@@ -91,8 +91,14 @@ contract ProLey {
         activeProyectsIndex[lastToken] = tokenIndex;
     }
     
-    function getProject(uint _id) view public returns (uint, string, address[]){
-        return (totalVotes[_id], URIs[_id], voters[_id]);
+    function getProject(uint _id) view public returns 
+    (bool, uint, string, uint, address[], address[]){
+        return (isActive[_id],
+        hashes[_id],
+        URIs[_id],
+        totalVotes[_id],  
+        voters[_id],
+        promotors[_id]);
     }
     
     function signProject(uint _id) public {
@@ -100,7 +106,7 @@ contract ProLey {
         require(_id <= TOTAL);
         require(activeProyectsIndex[_id] != 0);
         require(votes[_id][msg.sender] == false);
-        // is active
+
         totalVotes[_id] = totalVotes[_id] + 1;
         if (totalVotes[_id] == THRESHOLD) {
             emit ThresholdReached(_id);
@@ -116,9 +122,8 @@ contract ProLey {
         return votes[_id][msg.sender];
     }
     
-    function zzz() view returns (uint256[]) {
+    function getActiveProyects() view returns (uint256[]) {
         return (activeProyects);
     }
-    //disableproject
     
 }

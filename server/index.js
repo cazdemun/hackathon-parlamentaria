@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
 
+const shIn = require('./shimInterface.js')
+
 
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    console.log(shIn.createAccount());
+    res.send(JSON.stringify(shIn.createAccount()));
 });
 
 
@@ -13,6 +16,16 @@ app.get('/api/courses', (req, res) => {
 
 app.get('/api/nombres', (req, res) =>{
     res.send({nombre:'andre'});
+});
+
+app.get('/api/createProject', (req, res) =>{
+
+    res.send({nombre:'andre'});
+});
+
+app.get('/getActiveProjects', (req, res) =>{
+    shIn.getActiveProjects()
+    .then(activeProjects => res.send(activeProjects));
 });
 
 
