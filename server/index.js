@@ -9,6 +9,8 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.use(express.json()); 
+
 app.get('/', (req, res) => {
     console.log(shIn.createAccount());
     //res.send(JSON.stringify(shIn.createAccount()));
@@ -41,6 +43,13 @@ app.get('/getActiveProjects', (req, res) =>{
     });
 });
 
+app.post('/voteProject', (req, res) => {
+    shIn.voteProject(req.body.dni, req.body.value, req.body.id)
+    .then(txReceipt =>{
+        console.log(txReceipt.transactionHash);
+        res.json({ value: "success"});
+    });
+});
 
 app.listen(8080, () => console.log('Listening on port 8080'));
 // app.post()
