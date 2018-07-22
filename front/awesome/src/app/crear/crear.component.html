@@ -1,0 +1,35 @@
+<div class="main-container">
+  <!-- <header class="header">
+      <h1>Estado Explorar</h1>
+  </header> -->
+  <div class="explorer-container">
+      <div *ngFor="let projects of arrayProjects; let i = index" >
+          <div class="container-projects">
+              <div class="title" (click)="openPdf(projects.uri)">
+                  {{projects.title}}
+              </div>
+              <div class="votaciones">
+                  <div class="like" (click)="agree(1, projects.id)">
+                      <i class="material-icons">thumb_up</i>
+                      {{projects.votes[1]}}
+                  </div>
+                  <div class="dislike"(click)="agree(2, projects.id)">
+                      <i class="material-icons">thumb_down</i>
+                      {{projects.votes[2]}}
+                  </div>
+              </div>
+          </div>
+          </div>
+      </div>
+      <div class="pdf-container"  [ngClass]="statusPdf ? 'hide-pdf' : 'show-pdf'">
+        <div (click)="openPdf(null)" style="position:absolute; top:15; left:15">
+          CIERRA PES :) 
+        </div>
+          <pdf-viewer [src]="pdfSrc" 
+          [render-text]="true"
+          style="display: block;"
+          ></pdf-viewer>
+      </div>
+  </div>
+    
+              

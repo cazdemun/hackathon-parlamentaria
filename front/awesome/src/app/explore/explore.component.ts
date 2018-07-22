@@ -15,6 +15,8 @@ export class ExploreComponent implements OnInit {
   public url: string = "https://hackathon-server-cazdemun.c9users.io/";
   public panelOpenState = false;
   public arrayProjects;
+
+  public pdfSrc:string;
   
   constructor(private route:ActivatedRoute
     , private http: HttpClient,
@@ -38,6 +40,13 @@ export class ExploreComponent implements OnInit {
   ngOnInit() {
   }
 
+  public statusPdf: boolean = true;
+  openPdf(e){
+    this.pdfSrc = "";
+    this.statusPdf = !this.statusPdf;       
+    this.pdfSrc = e;
+  }
+  
   agree(e,i){
     let json = {value:e, id:i, dni:this.dni};
     this.http.post(this.url + 'voteProject', json)

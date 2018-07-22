@@ -31,6 +31,7 @@
     "materialize-css": "^0.100.2",
     "ng-http-loader": "^3.0.0",
     "ng-materialize": "0.0.3",
+    "ng2-pdf-viewer": "^5.1.1",
     "ngx-materialize": "^6.0.1",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
