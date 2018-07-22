@@ -1,0 +1,14 @@
+//SeleccionFinanciera: Pago en efectivo
+.SeleccionFinanciera.SeleccionFinanciera--pagoEfectivo
+  //- h1.SeleccionFinanciera-title Selecciona tu banco
+  .SeleccionFinanciera-slideWrapper
+    .SeleccionFinanciera-slideButtons
+    .SeleccionFinanciera-slide
+      each val in [1]
+        .SeleccionFinanciera-item.is-center
+          .link-wrapper
+            a.link.seleccionado(href="#", data-form-general="general", data-nom-banco="rapipago")
+              img(src="img/shop-places/mobile/rapipago.png", data-srcset="img/shop-places/rapipago.png 700w", alt="Rapipago")
+          .link-wrapper
+            a.link.is-disabled(href="#", data-nom-banco="pagofacil")
+              img(src="img/shop-places/mobile/pagofacil.png", data-srcset="img/shop-places/pagofacil.png 700w", alt="Pagofacil")

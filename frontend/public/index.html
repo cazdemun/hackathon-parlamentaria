@@ -1,40 +1,953 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Directorio musical | Rock Achorao</title>
+    <meta name="description" content="Información sobre el circuito musical en el Perú: bandas, espacios, listas, etc.">
+    <meta name="keywords" content="musica, rock peruano, bandas, lima, provincias, cultura, music, peruvian rock, indie, concerts">
+    <meta name="author" content="Aldonza Morgana">
+    <link rel="icon" type="image/png" sizes="32x32" href="source/source/img/ra.png">
+    <link rel="stylesheet" type="text/css" href="source/css/app.css">
+    <script>
+      document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");
+      
+    </script>
   </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+  <body class="loading">
+    <div class="OuterContainer">
+      <svg class="hidden">
+        <symbol id="icon-arrow" viewbox="0 0 24 24">
+          <title>arrow</title>
+          <polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "></polygon>
+        </symbol>
+        <symbol id="icon-cross" viewbox="0 0 24 23">
+          <title>cross</title>
+          <path d="M23.865 3.677c.197-.383.164-.818-.008-1.18.048-.41-.06-.827-.448-1.147L22.323.457c-.636-.524-1.632-.689-2.25 0a155.348 155.348 0 0 1-8.797 9.001C9.011 7.342 6.72 5.255 4.443 3.165c-.8-.734-1.956-.503-2.458.37C1.253 3.9.659 4.374.168 5.182c-.233.386-.215.872 0 1.258 1.47 2.635 4.31 4.951 6.646 7.083-.313.28-.623.562-.942.836-3.146 2.702-5.268 4.416-1.331 7.187.053.037.107.029.161.05.076.036.148.06.232.074.026 0 .05.005.075.003.082.007.16.027.243.011 2.117-.415 4.085-2.074 5.872-3.9 1.74 1.715 3.592 3.353 5.63 4.325.485.232 1.063.097 1.436-.227.626.047 1.197-.342 1.484-.901.042-.026.07-.041.116-.07.91-.569.993-1.701.32-2.482-1.522-1.762-3.138-3.438-4.787-5.084 2.968-2.9 6.674-6.027 8.542-9.667z"></path>
+        </symbol>
+      </svg>
+      <main>
+        <div class="content">
+          <h1 class="title-logo"><a href="#"><img src="source/img/logo-ra.png" target="_blank"></a></h1>
+          <h3 class="sub_title">Directorio musical con información de bandas, géneros, ránkings, espacios culturales y afines existentes en Perú.  </h3>
+          <div class="grid"><a class="grid__item" href="#preview-1">
+              <div class="box">
+                <div class="box__shadow"></div><img class="box__img" src="source/img/ciudades/portada.png" alt="música por ciudades">
+                <h3 class="box__title"><span class="box__title-inner" data-hover="Bandas">Bandas</span></h3>
+                <h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2 box__text-inner--reverse even">Ciudades</span></h4>
+              </div></a><a class="grid__item" href="#preview-2">
+              <div class="box">
+                <div class="box__shadow"></div><img class="box__img" src="source/img/generos/portada.png" alt="música por géneros">
+                <h3 class="box__title box__title--straight box__title--bottom_image_one"><span class="box__title-inner box__title-inner_image_one" data-hover="Bandas">Bandas</span></h3>
+                <h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2 box__text-inner--reverse odd">Géneros</span></h4>
+                <div class="box__deco box__deco--bottom">&#9835;</div>
+              </div></a><a class="grid__item" href="#preview-3">
+              <div class="box">
+                <div class="box__shadow"></div><img class="box__img" src="source/img/directorio.jpg" alt="Directorio de espacios virtuales">
+                <h3 class="box__title box__title--straight box__title--bottom_image_one"><span class="box__title-inner box__title-inner_image_one" data-hover="Espacios">Espacios</span></h3>
+                <h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2 box__text-inner--reverse even">¿Dónde?</span></h4>
+                <div class="box__deco box__deco--top">❔</div>
+              </div></a></div>
+        </div>
+        <div class="overlay">
+          <div class="overlay__reveal"></div>
+          <div class="overlay__item" id="preview-1">
+            <!--MainContent - Pagar en Efectivo-->
+            <section class="MainContent is-visible" data-nom="pago-efectivo">
+              <h1 class="title-logo"><a href="#"><img src="source/img/logo-ra.png" target="_blank"></a></h1>
+              <div class="MainContent-header">
+                <div class="GrupoSlides">
+                  <!--SlideFinancieras: Pago por internet - Sucursal-->
+                  <div class="SlideFinancieras SlideFinancieras--ciudades is-visible" data-nom="ciudades">
+                    <div class="SlideFinancieras-slideWrapper">
+                      <div class="SlideFinancieras-listButtons">   </div>
+                      <div class="SlideFinancieras-list">
+                        <div class="SlideFinancieras-item">
+                          <div class="link-wrapper"><a class="link seleccionado" href="#" data-nom-entidad="arequipa"><img src="source/img/ciudades/arequipa.jpg" alt="arequipa"></a></div>
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="ayacucho"><img src="source/img/ciudades/ayacucho.jpg" alt="ayacucho"></a></div>
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="cajamarca"><img src="source/img/ciudades/cajamarca.jpg" alt="cajamarca"></a></div>
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="chiclayo"><img src="source/img/ciudades/chiclayo.jpg" alt="chiclayo"></a></div>
+                        </div>
+                        <div class="SlideFinancieras-item">       
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="chimbote"><img src="source/img/ciudades/chimbote.jpg" alt="chimbote"></a></div>
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="huacho"><img src="source/img/ciudades/huacho.jpg" alt="Huacho"></a></div>
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="huancayo"><img src="source/img/ciudades/huancayo.jpg" alt="Huancayo"></a></div>
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="huanuco"><img src="source/img/ciudades/huanuco.jpg" alt="Huanuco"></a></div>
+                        </div>
+                        <div class="SlideFinancieras-item">       
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="huaraz"><img src="source/img/ciudades/huaraz.jpg" alt="huaraz"></a></div>
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="ica"><img src="source/img/ciudades/ica.jpg" alt="ica"></a></div>
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="iquitos"><img src="source/img/ciudades/iquitos.jpg" alt="iquitos"></a></div>
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="laoroya"><img src="source/img/ciudades/laoroya.jpg" alt="la oroya"></a></div>
+                        </div>
+                        <div class="SlideFinancieras-item">       
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="oxapampa"><img src="source/img/ciudades/oxapampa.jpg" alt="oxapampa"></a></div>
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="piura"><img src="source/img/ciudades/piura.jpg" alt="piura"></a></div>
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="pucallpa"><img src="source/img/ciudades/pucallpa.jpg" alt="pucallpa"></a></div>
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="puno"><img src="source/img/ciudades/puno.jpg" alt="puno"></a></div>
+                        </div>
+                        <div class="SlideFinancieras-item">       
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="tacna"><img src="source/img/ciudades/tacna.jpg" alt="tacna"></a></div>
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="tarapoto"><img src="source/img/ciudades/tarapoto.jpg" alt="tarapoto"></a></div>
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="trujillo"><img src="source/img/ciudades/trujillo.jpg" alt="trujillo"></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="MainContent-content">
+                <!--ProcedimientoPago-->
+                <div class="ProcedimientoPago">
+                  <!--Grupo de Tickets - Sucursal-->
+                  <div class="GrupoTickets GrupoTickets--sucursal" data-nom="sucursal">
+                    <!--Comienzo contenido Arequipa-->
+                    <div class="Ticket is-visible" data-nom-entidad="arequipa">
+                      <div class="Ticket-title">Música en Arequipa</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content"> 
+                          <p>Hemos recopilado actualmente <span>71</span> bandas de Arequipa. Si conoces alguna más, <a href="https://www.facebook.com/RockAchorao/" target="_blank">escríbenos.</a></p>
+                        </div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="row">
+                          <h3>
+                             <span>1. Aero (post grunge) </span><a href="http://aero-rock.bandcamp.com/album/depr3s-nica" target="_blank">► </a></h3>
+                          <h3>
+                             <span>2. Alias La Gringa (garaje, hardcore) </span><a href="https://soundcloud.com/alias-la-gringa" target="_blank">► </a></h3>
+                          <h3><span>3. Anonimos (indie rock) </span><a href="https://youtu.be/5Biy7lpIpGE" target="_blank">► </a></h3>
+                          <h3><span>4. Apuman (fusión) </span><a href="https://youtu.be/FwFeiDMuyes" target="_blank">► </a></h3>
+                          <h3><span>5. Barriada vulgar (punk rock) </span><a href="https://youtu.be/jJmEakTIaJQ" target="_blank">► </a></h3>
+                          <h3><span>6. Beis (synth pop) </span><a href="https://soundcloud.com/beis-beis" target="_blank">► </a></h3>
+                          <h3><span>7. Carga Ligera (indie rock) </span><a href="https://youtu.be/oclH86L42Ug" target="_blank">► </a></h3>
+                          <h3><span>8. CHASKA folk metal (folk metal) </span><a href="https://youtu.be/XB8vPFektzg" target="_blank">► </a></h3>
+                          <h3><span>9. Comfuzztible (garaje) </span><a href="https://youtu.be/Age95jf5kKA" target="_blank">► </a></h3>
+                          <h3><span>10. Delay Tambor (idm/ambient) </span><a href="https://soundcloud.com/mias/delay-tambor-dimension-dante-droid-2600-remix" target="_blank">► </a></h3>
+                          <h3><span>11. Detonador Rocanrol (post grunge) </span><a href="https://youtu.be/nWW_p2-nUAA" target="_blank">► </a></h3>
+                          <h3><span>12. Discrepunkcia (punk) </span><a href="https://youtu.be/sSVnPya1YB8" target="_blank">► </a></h3>
+                          <h3><span>13. "EL ENCAJE" Perfecto (hip hop fusión) </span><a href="https://youtu.be/C5kzS8N4RPI" target="_blank">► </a></h3>
+                          <h3><span>14. Em Virginia (rock alternativo) </span><a href="https://youtu.be/_9XghlBc7uI" target="_blank">► </a></h3>
+                          <h3><span>15. Entrenieblas (post punk revival) </span><a href="https://youtu.be/IjfXyuZz_8w" target="_blank">► </a></h3>
+                          <h3><span>16. Felix Dorian (rock n roll) </span><a href="https://youtu.be/L68EPRK_P0w" target="_blank">► </a></h3>
+                          <h3><span>17. Fiorella16 (ruidismo) </span><a href="https://youtu.be/gP7QLvcXeU4" target="_blank">► </a></h3>
+                          <h3><span>18. Fobya (post punk) </span><a href="https://youtu.be/go0g2jxhBIo" target="_blank">► </a></h3>
+                          <h3><span>19. Freak (Funk core) </span><a href="https://youtu.be/DP8Zx_7l-Tc" target="_blank">► </a></h3>
+                          <h3><span>20. Gallina McFly (fusión/rockabilly) </span><a href="https://youtu.be/_PgzE-8ErwY" target="_blank">►     </a></h3>
+                          <h3><span>21. Go Icarus (indie folk/pop barroco) </span><a href="https://youtu.be/Khnu-wt8ZW8" target="_blank">► </a></h3>
+                          <h3><span>22. Grito de miseria (anarkopunk) </span><a href="https://youtu.be/Jj0-9NlEfzM" target="_blank">► </a></h3>
+                          <h3><span>23. H.Sandro (blues rock) </span><a href="https://soundcloud.com/azuldesierto" target="_blank">► </a></h3>
+                          <h3><span>24. Hammelin (folk metal) </span><a href="https://youtu.be/SPQOnYT9CaM" target="_blank">► </a></h3>
+                          <h3><span>25. Hoja seca (rock alternativo) </span><a href="https://soundcloud.com/urban-daemon/hoja-seca-instinto-bipolar" target="_blank">► </a></h3>
+                          <h3><span>26. Jacketts (hard rock) </span><a href="https://youtu.be/rjeK_pjbCas" target="_blank">► </a></h3>
+                          <h3><span>27. La familia (garage) </span><a href="https://soundcloud.com/sucio-records/balacera-la-familia" target="_blank">► </a></h3>
+                          <h3><span>28. La katana funk (funk) </span><a href="https://youtu.be/wRDBeQQ2N2Q" target="_blank">► </a></h3>
+                          <h3><span>29. La vie (indie folk/post rock) </span><a href="http://youtu.be/echru1z5hkmr" target="_blank">► </a></h3>
+                          <h3><span>30. Legión sacra (death thrash metal) </span><a href="https://www.youtube.com/watch?v=rWNXL4pUVig" target="_blank">► </a></h3>
+                          <h3><span>31. Llantas negras (ska punk) </span><a href="https://youtu.be/hsUgiE2iKpU" target="_blank">► </a></h3>
+                          <h3><span>32. Los Chapillacs (fusión, chicha) </span><a href="https://youtu.be/vQYMxDyq9Lc" target="_blank">► </a></h3>
+                          <h3><span>33. Los death monkeys (nu metal) </span><a href="https://youtu.be/ktOKmEZMnZI" target="_blank">► </a></h3>
+                          <h3><span>34. Los flechados (punk rock) </span><a href="http://youtu.be/jmdqmc1jble" target="_blank">► </a></h3>
+                          <h3><span>35. Los monkiss (fusión) </span><a href="https://youtu.be/XBJ3R3RLM7g" target="_blank">► </a></h3>
+                        </div>
+                        <div class="row">
+                          <h3><span>36. Los paicons (surf garaje rock) </span><a href="https://soundcloud.com/sucio-records/huachito-de-loteria-los" target="_blank">► </a></h3>
+                          <h3><span>37. Mambala (reggae fusión) </span><a href="https://youtu.be/0uYexAxSqvk" target="_blank">► </a></h3>
+                          <h3><span>38. ManiaC (thrash metal) </span><a href="https://youtu.be/Ya1fBRMRo5Q" target="_blank">► </a></h3>
+                          <h3><span>39. Mudra (thrash metal) </span><a href="http://youtu.be/zhz_rb_3xcg" target="_blank">► </a></h3>
+                          <h3><span>40. Mulamuerta (punk rock) </span><a href="https://youtu.be/4KVUl1FalEQ" target="_blank">► </a></h3>
+                          <h3><span>41. Natural Misti (Reggae roots andino) </span><a href="https://youtu.be/3fqh1-abBGo" target="_blank">► </a></h3>
+                          <h3><span>42. Nodo (idm/ambient) </span><a href="https://soundcloud.com/mias/nodo-dinamica-del-viento-y-el-mar" target="_blank">► </a></h3>
+                          <h3><span>43. Noir (post punk) </span><a href="https://youtu.be/eGK6SjmcY60" target="_blank">► </a></h3>
+                          <h3><span>44. Nousvlid (post hardcore) </span><a href="https://youtu.be/r8o5uD7rtTQ" target="_blank">► </a></h3>
+                          <h3><span>45. Orquidea (shoegazing) </span><a href="https://youtu.be/AU4CcvZHPII" target="_blank">► </a></h3>
+                          <h3><span>46. Oscuro (rap, hip hop) </span><a href="https://youtu.be/n5FZi5oh5Pw" target="_blank">►  </a></h3>
+                          <h3><span>47. Persepolis (indie rock, psicodelia) </span><a href="https://youtu.be/PJZzUdHqviQ" target="_blank">► </a></h3>
+                          <h3><span>48. Peter Pedro (post rock) </span><a href="https://youtu.be/9VMjLrEYgoY" target="_blank">► </a></h3>
+                          <h3><span>49. Pez Revolver (soft rock) </span><a href="http://youtu.be/8MCInYfGxpg" target="_blank">► </a></h3>
+                          <h3><span>50. Platónica (pop rock) </span><a href="http://youtu.be/I_dW5-iIkZk" target="_blank">►  </a></h3>
+                          <h3><span>51. Quilluya (electro fusión experimental) </span><a href="https://soundcloud.com/quilluya/nanaq-miskilla" target="_blank">► </a></h3>
+                          <h3><span>52. Rock and Rose (soft rock) </span><a href="http://youtu.be/1cPS-wUVW4s" target="_blank">► </a></h3>
+                          <h3><span>53. Roncha Kills (hardcore punk) </span><a href="https://soundcloud.com/ronchakills" target="_blank">► </a></h3>
+                          <h3><span>54. S-23 (nu metal/post grunge) </span><a href="https://youtu.be/45XClQB89UI" target="_blank">► </a></h3>
+                          <h3><span>55. Southern Lions (nu metal, metalcore) </span><a href="https://youtu.be/-t2YYf9FZ24" target="_blank">► </a></h3>
+                          <h3><span>56. Stonearth (stoner rock) </span><a href="https://soundcloud.com/spiralarips/stonearth-entre-mis-manos" target="_blank">► </a></h3>
+                          <h3><span>57. Synhysteria (blues rock) </span><a href="https://youtu.be/D7L58tE2lzk" target="_blank">► </a></h3>
+                          <h3><span>58. The lunes (indie rock) </span><a href="https://soundcloud.com/the-lunes" target="_blank">► </a></h3>
+                          <h3><span>59. The orange room (rock alternativo) </span><a href="https://youtu.be/yiiIOyuLRsE" target="_blank">►  </a></h3>
+                          <h3><span>60. The play (indie rock) </span><a href="https://youtu.be/dRh4VEK3RBg" target="_blank">► </a></h3>
+                          <h3><span>61. Tony Danza (math rock/post hardcore) </span><a href="https://youtu.be/pQaJccKjXTc" target="_blank">► </a></h3>
+                          <h3><span>62. Trepanador (death metal) </span><a href="https://youtu.be/4UVwcO3Yhio" target="_blank">► </a></h3>
+                          <h3><span>63. Trustor (thrash metal) </span><a href="https://youtu.be/fsmKjsxN2gs" target="_blank">►  </a></h3>
+                          <h3><span>64. Túpac yufunkuy (funk) </span><a href="https://youtu.be/Jd8gzYQHNtA" target="_blank">► </a></h3>
+                          <h3><span>65. X Dinero (ska/ rock ligero) </span><a href="https://www.youtube.com/watch?v=vzu2_LOXD4M" target="_blank">► </a></h3>
+                          <h2>BONUS      </h2>
+                          <h3><span>66. Los incognitos (rock 60s) </span><a href="https://youtu.be/VtJNssN8OmE" target="_blank">► </a></h3>
+                          <h3><span>67. Los texao (rock garage 60s) </span><a href="https://youtu.be/lxFdf71vsuw" target="_blank">►  </a></h3>
+                          <h3><span>68. Free love system (rock psicodélico 70s) </span><a href="https://youtu.be/sC29t6yYsbs" target="_blank">► </a></h3>
+                          <h3><span>69. Baretto (soft rock, progre 80-90s) </span><a href="https://youtu.be/KOTM78es1xQ" target="_blank">► </a></h3>
+                          <h3><span>70. Playa cero (rock, reggae 90s) </span><a href="https://youtu.be/nODQJhpwq1M" target="_blank">► </a></h3>
+                          <h3><span>71. Konflicto interno (anarkopunk 90s) </span><a href="https://youtu.be/eIcsnXKcSK4" target="_blank">► </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Fin contenido Arequipa-->
+                    <!--Comienzo contenido ayacucho-->
+                    <div class="Ticket Ticket-banamex" data-nom-entidad="ayacucho">
+                      <div class="Ticket-title">Música en Ayacucho</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content"> 
+                          <p>Hemos recopilado actualmente <span>28</span> bandas de Ayacucho. Si conoces alguna más, <a href="https://www.facebook.com/RockAchorao/" target="_blank">escríbenos.</a></p>
+                        </div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="row">
+                          <h3><span>1. Arnawan (alternativo) </span><a href="http://youtu.be/o8J54KjCPUg" target="_blank">► </a></h3>
+                          <h3><span>2. Av. Rock (pop rock) </span><a href="http://youtu.be/RnnwidHXSv8" target="_blank">► </a></h3>
+                          <h3><span>3. Ayapacha-R4 (fusión ska) </span><a href="https://youtu.be/QU8u32PGPXA" target="_blank">► </a></h3>
+                          <h3><span>4. Blazoft (blues rock) </span><a href="http://youtu.be/4vVgp5haBVM" target="_blank">► </a></h3>
+                          <h3><span>5. Brageiki (fusión experimental) </span><a href="https://soundcloud.com/brageiki-vega" target="_blank">► </a></h3>
+                          <h3><span>6. Códigos Postales (indie folk) </span><a href="http://youtu.be/lK_tnxk6-XM" target="_blank">► </a></h3>
+                          <h3><span>7. Deprisofisty (death metal progresivo) </span><a href="http://youtu.be/jhPhadSkeOA" target="_blank">► </a></h3>
+                          <h3><span>8. Diadema (post punk revival) </span><a href="http://youtu.be/ZgCncJdbxQ0" target="_blank">► </a></h3>
+                          <h3><span>9. Distorsión Punk (punk) </span><a href="http://youtu.be/nN3T2u8I5Kk" target="_blank">► </a></h3>
+                          <h3><span>10. FüGhawZ (post rock) </span><a href="https://soundcloud.com/fughawz/arr-ncame-los-dientes" target="_blank">► </a></h3>
+                          <h3><span>11. IAO (pop fusión) </span><a href="http://youtu.be/zUYzxzfyVME" target="_blank">► </a></h3>
+                          <h3><span>12. Idenia (pop rock) </span><a href="http://youtu.be/BwbpzBlh99o" target="_blank">► </a></h3>
+                          <h3><span>13. La hoja (blues rock) </span><a href="https://myspace.com/lahojarockblues/music/songs" target="_blank">► </a></h3>
+                          <h3><span>14. Markakme (death metal) </span><a href="http://youtu.be/3tUOXor37ik" target="_blank">► </a></h3>
+                          <h3><span>15. Masturbator (hardcore) </span><a href="http://youtu.be/zJAGy9BhuDU" target="_blank">► </a></h3>
+                          <h3><span>16. Memphis (indie rock/pop punk) </span><a href="http://youtu.be/uXDjPpbbTRM" target="_blank">► </a></h3>
+                          <h3><span>17. Mutaytas (alternativo/punk) </span><a href="http://youtu.be/2S1aEoNOOyY" target="_blank">► </a></h3>
+                          <h3><span>18. Plexo (soft rock) </span><a href="http://youtu.be/2kSyPokP2-s" target="_blank">► </a></h3>
+                          <h3><span>19. Poema 20 (space rock) </span><a href="http://youtu.be/nNxlsj7f48s" target="_blank">► </a></h3>
+                          <h3><span>20. Proyecto Quimera (post grunge) </span><a href="http://youtu.be/ScyY5P-tPaw" target="_blank">► </a></h3>
+                        </div>
+                        <div class="row">
+                          <h3><span>21. R4 (reggae) </span><a href="http://youtu.be/46DBNyGYy3U" target="_blank">► </a></h3>
+                          <h3><span>22. Rock Jones (soft rock acústico) </span><a href="https://soundcloud.com/rock-jones/cuando-tu-no-estas-natural" target="_blank">► </a></h3>
+                          <h3><span>23. Siatica (fusión/post grunge) </span><a href="http://youtu.be/5TpCQPMoopE" target="_blank">► </a></h3>
+                          <h3><span>24. Simples Locos (hard rock) </span><a href="http://youtu.be/sPzvQByuX7Y" target="_blank">► </a></h3>
+                          <h3><span>25. UCHPA (blues rock fusión) </span><a href="http://youtu.be/U5bUWAOUGHo" target="_blank">► </a></h3>
+                          <h3><span>26. Unocomados (hip hop experimental) </span><a href="https://soundcloud.com/huamangazorock/unocomados-suplicio" target="_blank">► </a></h3>
+                          <h2>BONUS      </h2>
+                          <h3><span>27. Los Siderals (rock instrumental 60s) </span><a href="http://youtu.be/3lfSM4L0kuY" target="_blank">► </a></h3>
+                          <h3><span>28. Los Beltons (cumbia 60s) </span><a href="http://youtu.be/PqRo-cZMXYM" target="_blank">► </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Fin contenido ayacucho-->
+                    <!--Cajamarca|-Start--->
+                    <div class="Ticket Ticket-azteca" data-nom-entidad="cajamarca">
+                      <div class="Ticket-title">Música en Cajamarca</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content"> 
+                          <p>Hemos recopilado actualmente <span>43</span> bandas de Cajamarca. Si conoces alguna más,  <a href="https://www.facebook.com/RockAchorao/" target="_blank">escríbenos.</a></p>
+                        </div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="row">
+                          <h3><span>1. Audiosónica (pop rock alternativo) </span><a href="https://youtu.be/QIBhg60DrAc" target="_blank">► </a></h3>
+                          <h3><span>2. Bandera Negra (death black metal) </span><a href="http://youtu.be/MD7FgUtDzlU" target="_blank">► </a></h3>
+                          <h3><span>3. Biologica Bit (electro rock) </span><a href="http://goo.gl/kcBZz7" target="_blank">► </a></h3>
+                          <h3><span>4. Cancerbero (nu metal) </span><a href="https://soundcloud.com/cancerbero-1" target="_blank">► </a></h3>
+                          <h3><span>5. Colateral (rock) </span><a href="https://youtu.be/buONmcP22CM" target="_blank">► </a></h3>
+                          <h3><span>6. Colapso (rock alternativo) </span><a href="https://soundcloud.com/colapso-rockperu" target="_blank">► </a></h3>
+                          <h3><span>7. Depraved (death metal) </span><a href="http://youtu.be/tBYSSz2fZaQ" target="_blank">► </a></h3>
+                          <h3><span>8. Desconectado (hard rock) </span><a href="http://goo.gl/mWpl6r" target="_blank">► </a></h3>
+                          <h3><span>9. Eterno (hardcore) </span><a href="https://youtu.be/FCL6ClAC8Hs" target="_blank">► </a></h3>
+                          <h3><span>10. Eterea (punk rock) </span><a href="https://youtu.be/QIBhg60DrAc" target="_blank">► </a></h3>
+                          <h3><span>11. Gente Cangrejo (post hardcore) </span><a href="https://youtu.be/tICu_be6pWc" target="_blank">► </a></h3>
+                          <h3><span>12. Granizo (Lofi) </span><a href="http://youtu.be/dfC0lZwCLG4" target="_blank">► </a></h3>
+                          <h3><span>13. Gusanos de cuerda (psicodelia) </span><a href="https://soundcloud.com/ramon-mu-oz/02-un-cuento-mas" target="_blank">► </a></h3>
+                          <h3><span>14. Franco Hamilton (pop rock) </span><a href="http://youtu.be/DsIjgPPzxA4" target="_blank">► </a></h3>
+                          <h3><span>15. Forastero (hardcore punk) </span><a href="https://youtu.be/WPLEQXQIsUQ" target="_blank">► </a></h3>
+                          <h3><span>16. Holocausto (rock instrumental) </span><a href="http://youtu.be/Oql4NysTcXM" target="_blank">► </a></h3>
+                          <h3><span>17. Kaliko y los Caliches (rock) </span><a href="http://youtu.be/VyG59iYAT00" target="_blank">► </a></h3>
+                          <h3><span>18. Karikatumba (hard rock) </span><a href="http://youtu.be/6ENfSCRpFYU" target="_blank">► </a></h3>
+                          <h3><span>19. La kuchanguita (ska punk reggae) </span><a href="http://youtu.be/fyn4g0LSYvE" target="_blank">► </a></h3>
+                          <h3><span>20. La mancha de Dulcinea (punk rock) </span><a href="http://youtu.be/u780dVnzqwU" target="_blank">► </a></h3>
+                        </div>
+                        <div class="row">
+                          <h3><span>21. Las ratapunk (punk) </span><a href="http://youtu.be/ci5wS1yuRsA" target="_blank">► </a></h3>
+                          <h3><span>22. Los hugos (anarkopunk) </span><a href="https://youtu.be/8RapXUw8bKY" target="_blank">► </a></h3>
+                          <h3><span>23. Marea Cristal (indie pop) </span><a href="http://mareacristal.bandcamp.com/" target="_blank">► </a></h3>
+                          <h3><span>24. N.A.T.I.V.O (nu metal) </span><a href="https://youtu.be/G-9e74t_JOA" target="_blank">► </a></h3>
+                          <h3><span>25. Nueva Dirección (hardcore punk) </span><a href="http://youtu.be/UQe8Em-Gohg" target="_blank">► </a></h3>
+                          <h3><span>26. Oscar Pajares (electrónica fusión) </span><a href="http://youtu.be/n8kS9oXC3Og" target="_blank">► </a></h3>
+                          <h3><span>27. Holocausto (rock instrumental) </span><a href="http://youtu.be/Oql4NysTcXM" target="_blank">► </a></h3>
+                          <h3><span>28. Pérdida (hardcore punk) </span><a href="http://perdidahc.bandcamp.com/" target="_blank">► </a></h3>
+                          <h3><span>29. Regret (metal) </span><a href="http://youtu.be/BT5S2pvGoZg" target="_blank">► </a></h3>
+                          <h3><span>30. Rejunta2 (funky reggae) </span><a href="https://www.youtube.com/watch?v=rz78fiBi7Nc" target="_blank">► </a></h3>
+                          <h3><span>31. Ruido Negro (rock) </span><a href="https://youtu.be/JoeFOd5jaRo" target="_blank">► </a></h3>
+                          <h3><span>32. Serrania (fusión) </span><a href="http://youtu.be/CFRn91NQ_mw" target="_blank">► </a></h3>
+                          <h3><span>33. Schokta (rock) </span><a href="hhttps://youtu.be/vOxMNZIbnpo" target="_blank">► </a></h3>
+                          <h3><span>34. Shukakes (punk rock) </span><a href="http://youtu.be/hpt67mrwqYA" target="_blank">► </a></h3>
+                          <h3><span>35. Sin Patria (punk) </span><a href="http://youtu.be/YWQ9cYeusAg" target="_blank">► </a></h3>
+                          <h3><span>36. Sueño inmortal (rock) </span><a href="http://youtu.be/JoeFOd5jaRo" target="_blank">► </a></h3>
+                          <h3><span>37. Surmenage (grunge) </span><a href="http://youtu.be/Jw6vsUOFT58" target="_blank">► </a></h3>
+                          <h3><span>38. Transgresión (metal core) </span><a href="https://myspace.com/transgresionperu/music" target="_blank">► </a></h3>
+                          <h3><span>39. Tropel (punk rock) </span><a href="http://youtu.be/mkA0_05KCzQ" target="_blank">► </a></h3>
+                          <h3><span>40. Unidad 4 (punk rock) </span><a href="http://youtu.be/1458DVfG3Mw" target="_blank">► </a></h3>
+                          <h3><span>41. Velociraptors (garage rock) </span><a href="https://youtu.be/o4d4LVnAD6M" target="_blank">► </a></h3>
+                          <h3><span>42. Vete a la mierda (anarko raw punk) </span><a href="http://youtu.be/Ucskyg7Vouk" target="_blank">► </a></h3>
+                          <h3><span>43. Yma Sumac (lírico) </span><a href="http://youtu.be/Tc6xzHaSDKo" target="_blank">►    </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Cajamarca|-End--->
+                    <!--chiclayo|-Start--->
+                    <div class="Ticket" data-nom-entidad="chiclayo">
+                      <div class="Ticket-title">Música en Chiclayo</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content"> 
+                          <p>Hemos recopilado actualmente <span>21</span> bandas de Chiclayo. Si conoces alguna más, <a href="https://www.facebook.com/RockAchorao/" target="_blank">escríbenos.</a></p>
+                        </div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="row">
+                          <h3><span>1. Adaluz (hard rock) </span><a href="http://youtu.be/diGWyqyHAX8" target="_blank">► </a></h3>
+                          <h3><span>2. Aia Paec (rock experimental) </span><a href="http://aiapaec.bandcamp.com/" target="_blank">► </a></h3>
+                          <h3><span>3. Belladona (rock) </span><a href="https://youtu.be/5dSY9yY3edI" target="_blank">► </a></h3>
+                          <h3><span>4. Carcava (death metal) </span><a href="http://youtu.be/L0Ff1RZV7IA" target="_blank">► </a></h3>
+                          <h3><span>5. Diéresis (rock alternativo) </span><a href="http://youtu.be/e6Q6khOlKy8" target="_blank">► </a></h3>
+                          <h3><span>6. Dr. Changó (ska fusión) </span><a href="https://youtu.be/b17kkcizmkc" target="_blank">► </a></h3>
+                          <h3><span>7. Haarp (rock alternativo) </span><a href="https://youtu.be/5yVL_4M5qaA" target="_blank">► </a></h3>
+                          <h3><span>8. Huaca Roots (reggae) </span><a href="http://youtu.be/54Fluh_Stk4" target="_blank">► </a></h3>
+                          <h3><span>9. Inmune HC (punk hardcore) </span><a href="https://soundcloud.com/inmune-hc" target="_blank">► </a></h3>
+                          <h3><span>10. Jackhammer (metal) </span><a href="http://youtu.be/OC3M7YAs3Wo" target="_blank">► </a></h3>
+                        </div>
+                        <div class="row">
+                          <h3><span>11. Kodigo Civil (punk rock) </span><a href="http://youtu.be/U0WKvsedeFY" target="_blank">► </a></h3>
+                          <h3><span>12. Korrosion (punk hardcore) </span><a href="http://youtu.be/59yyZdjzUMc" target="_blank">► </a></h3>
+                          <h3><span>13. Korte Transversal (punk reggae ska) </span><a href="http://youtu.be/1UsSfYu-HKA" target="_blank">► </a></h3>
+                          <h3><span>14. Leyenda (blues rock rockabilly) </span><a href="http://youtu.be/xAl94Avpzr8" target="_blank">► </a></h3>
+                          <h3><span>15. Maresantos (rock) </span><a href="http://youtu.be/R5F6O9ooJfE" target="_blank">► </a></h3>
+                          <h3><span>16. Mr. Cox (reggae sound power) </span><a href="http://youtu.be/U0WKvsedeFY" target="_blank">► </a></h3>
+                          <h3><span>17. Overdrive (rock) </span><a href="http://youtu.be/lvOlKSrRlpU" target="_blank">► </a></h3>
+                          <h3><span>18. Requiestcat (metal) </span><a href="http://youtu.be/-DHi_YEBfRg" target="_blank">► </a></h3>
+                          <h3><span>19. Rockoto (funk rock) </span><a href="http://youtu.be/ktDuhfCySS8" target="_blank">► </a></h3>
+                          <h3><span>20. Sad Animals (ambient electrónica) </span><a href="http://youtu.be/95ID_SOw6Hs" target="_blank">► </a></h3>
+                          <h3><span>21. Smokin' (blues rock) </span><a href="http://vimeo.com/95736245" target="_blank">► </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Chiclayo|-End--->
+                    <!--Chimbote|-Start--->
+                    <div class="Ticket" data-nom-entidad="chimbote">
+                      <div class="Ticket-title">Música en Chimbote</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content"> 
+                          <p>Hemos recopilado actualmente <span>5</span> bandas de Chimbote. Si conoces alguna más, <a href="https://www.facebook.com/RockAchorao/" target="_blank">escríbenos.</a></p>
+                        </div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="row">
+                          <h3><span>1. Andariel (punk rock) </span><a href="http://youtu.be/r76z2j2HJ1U" target="_blank">► </a></h3>
+                          <h3><span>2. Ormiga Rock (rock ligero) </span><a href="http://youtu.be/RuvV7EIiKZc" target="_blank">► </a></h3>
+                          <h3><span>3. Los pasteles verdes (nueva ola) </span><a href="http://youtu.be/YXzumA8nBWY" target="_blank">► </a></h3>
+                        </div>
+                        <div class="row">
+                          <h3><span>4. Mandrágora (heavy metal) </span><a href="http://youtu.be/BDl6KsAAzUA" target="_blank">► </a></h3>
+                          <h3><span>5. Taxi (pop rock) </span><a href="http://youtu.be/MigfIAUtgqY" target="_blank">► </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Chimbote|-End--->
+                    <!--|MEX|Cash|Bancos|1053_"Inbursa"|-Start--->
+                    <div class="Ticket Ticket-inbursa" data-nom-entidad="inbursa">
+                      <div class="Ticket-title">Referencia de Pago</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content">Acude a la sucursal Inbursa y da el <b>número de convenio, número de referencia</b> y monto <b>a pagar</b>. El pago es a nombre de <b>SafetyPay</b>. Podrás pagar en <b>Efectivo o cheque de Inbursa</b>.</div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="Ticket-codigo nopadding">
+                          <div class="row row--agencia">
+                            <p class="title-value">Número de Convenio</p>
+                            <h2 class="value">888000005520</h2>
+                          </div>
+                          <div class="row row--cuentacorriente">
+                            <p class="title-value">Número de referencia</p>
+                            <h2 class="value">6687 9336 7338 35102</h2>
+                          </div>
+                        </div>
+                        <div class="Ticket-total">
+                          <div class="Ticket-total-detalle">
+                            <div class="row">
+                              <p class="label">Total:</p>
+                              <h2 class="value">$ 536.99</h2>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="Ticket-tiempo">
+                          <div class="tiempo-mensaje"><b>Tienes:</b></div>
+                          <div class="tiempo-reloj"><i class="icon-clock"></i><span id="timer_hor_1">183h</span><span class="divisor">:</span><span id="timer_min_1" data-minutos="58">58m</span><span class="divisor">:</span><span id="timer_seg_1">24s</span></div>
+                          <div class="tiempo-mensaje">Paga antes del 20 Oct 2018 - 23:35 hrs.</div>
+                        </div>
+                      </div>
+                      <div class="Ticket-terminos"><span><input type="checkbox" checked="checked"> </span><span>Ver <a href="#">Términos y Condiciones</a> y <a href="#">políticas de privacidad</a></span><span>El total incluye $ 1.20 por costos operativos</span></div>
+                      <!--EnvioInstrucciones-->
+                      <div class="SendInstructions">
+                        <div class="SendInstructions__content">
+                          <form action="#" method="post">
+                            <div class="row">
+                              <div class="col">
+                                <input class="Input Input--email" type="email" name="email" placeholder="Correo" maxlength="200">
+                              </div>
+                              <div class="col">
+                                <div class="ButtonContainer">
+                                  <button class="Button"><span class="Button__text">Enviar instrucciones vía correo</span><span class="Button__icon"></span></button>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="EnvioInstrucciones">
+                        <div class="EnvioInstrucciones-row">
+                          <div class="EnvioInstrucciones-col">
+                            <div class="FormulariosInstrucciones">
+                              <div class="FormulariosInstrucciones-guia">Instrucciones vía</div>
+                              <div class="FormulariosInstrucciones-content">
+                                <div class="SendInformationButton SendInformationButton--telephone">
+                                  <form class="SendInformationButton__form" name="telephone_instructions" method="post">
+                                    <div class="SendInformationButton__content">
+                                      <input class="Input" type="tel" name="telephone" placeholder="Celular (9 dígitos)">
+                                      <button class="IconButton IconButton--telephone" title="Enviar SMS"></button>
+                                    </div>
+                                  </form>
+                                </div>
+                                <button class="IconButton IconButton--print" title="Imprimir"></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="EnvioInstrucciones-col">
+                            <div class="Footer">
+                              <div class="Footer-content">
+                                <div class="Footer-ayuda"><span><a href="mailto:soporte@safetypay.com">soporte@safetypay.com</a></span></div>
+                              </div>
+                            </div>
+                            <div class="Logo"><img class="Logo-img" src="source/img/logo-safetypay-small.png" alt="Vía SafetyPay"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--Fin:EnvioInstrucciones-->
+                    </div>
+                    <!--|MEX|Cash|Bancos|1053_"Inbursa"|-End--->
+                    <!--huancayo|-Start--->
+                    <div class="Ticket" data-nom-entidad="huancayo">
+                      <div class="Ticket-title">Música en Huancayo</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content"> 
+                          <p>Hemos recopilado actualmente <span>22</span> bandas de Huancayo. Si conoces alguna más, <a href="https://www.facebook.com/RockAchorao/" target="_blank">escríbenos.</a></p>
+                        </div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="row">
+                          <h3><span>1. 40 Nativoz (rock) </span><a href="http://youtu.be/rmul9GXoskA" target="_blank">► </a></h3>
+                          <h3><span>2. Adrian Matos (heavy metal) </span><a href="http://youtu.be/HGKYfGNZILY" target="_blank">► </a></h3>
+                          <h3><span>3. El cerebro de Gregorio Samsa (stoner rock) </span><a href="http://goo.gl/2ME2sY" target="_blank">► </a></h3>
+                          <h3><span>4. D-Kievre (punk rock) </span><a href="http://youtu.be/OlmsdW3NLMM" target="_blank">► </a></h3>
+                          <h3><span>5. Dominik (rock alternativo) </span><a href="http://youtu.be/bE4Lz71dews" target="_blank">► </a></h3>
+                          <h3><span>6. Esvedra (rock progresivo) </span><a href="http://youtu.be/zyRqtHW-m24" target="_blank">► </a></h3>
+                          <h3><span>7. Estepario (funk, Soul, Blues) </span><a href="http://youtu.be/qHOLYKgpjsE" target="_blank">► </a></h3>
+                          <h3><span>8. Eulora Rock (metal rock) </span><a href="http://youtu.be/Y43sW78YzcY" target="_blank">► </a></h3>
+                          <h3><span>9. Gnoma (doom death metal) </span><a href="http://youtu.be/nMAo85kMu" target="_blank">► </a></h3>
+                          <h3><span>10. Hombres de paja (punk rock) </span><a href="http://youtu.be/QUNdFW5kPEw" target="_blank">► </a></h3>
+                        </div>
+                        <div class="row">
+                          <h3><span>11. Indoraza (metal rock indígena) </span><a href="http://youtu.be/P2IEgxBhG6I" target="_blank">► </a></h3>
+                          <h3><span>12. Jichay (groove metal) </span><a href="http://youtu.be/vEKEf8s2ki4" target="_blank">► </a></h3>
+                          <h3><span>13. John Liar (indie rock) </span><a href="http://goo.gl/zUzFl9" target="_blank">► </a></h3>
+                          <h3><span>14. Leyenda (blues rock rockabilly) </span><a href="http://youtu.be/xAl94Avpzr8" target="_blank">► </a></h3>
+                          <h3><span>15. Komplicado (rock alternativo) </span><a href="http://youtu.be/81rJcGZS3yA" target="_blank">► </a></h3>
+                          <h3><span>16. NoKomforme (pop punk) </span><a href="http://youtu.be/ByGanxz3hcY" target="_blank">► </a></h3>
+                          <h3><span>17. Overdrive (rock) </span><a href="http://youtu.be/lvOlKSrRlpU" target="_blank">► </a></h3>
+                          <h3><span>18. Play a Bit (post rock) </span><a href="http://goo.gl/hZZov0" target="_blank">► </a></h3>
+                          <h3><span>19. Sangre de Acero (hard rock) </span><a href="http://youtu.be/M4XH_8jgOkk" target="_blank">► </a></h3>
+                          <h3><span>20. Smilodons (heavy power progresivo) </span><a href="http://youtu.be/PFbw3I8XnYc" target="_blank">► </a></h3>
+                          <h3><span>21. The Blue Distance (indie rock electronic) </span><a href="http://goo.gl/nr6gh4" target="_blank">► </a></h3>
+                          <h3><span>22. Viotype (death metal) </span><a href="http://youtu.be/7hifsdeRP6w" target="_blank">► </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!--huancayo|-End--->
+                    <!--Huanuco|-Start--->
+                    <div class="Ticket" data-nom-entidad="huanuco">
+                      <div class="Ticket-title">Música en Huánuco</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content"> 
+                          <p>Hemos recopilado actualmente <span>11</span> bandas de Huánuco. Si conoces alguna más, <a href="https://www.facebook.com/RockAchorao/" target="_blank">escríbenos.</a></p>
+                        </div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="row">
+                          <h3><span>1. Aldzeimer (pop rock) </span><a href="https://youtu.be/GTY6yZwyRUU" target="_blank">► </a></h3>
+                          <h3><span>2. Breezelyzer (experimental avantgarde, electronic) </span><a href="https://breezelyzer.bandcamp.com/releases" target="_blank">► </a></h3>
+                          <h3><span>3. Daszenmachine (electrónica) </span><a href="http://goo.gl/WroJGf" target="_blank">► </a></h3>
+                          <h3><span>4. La Sombra (post punk/new wave) </span><a href="https://youtu.be/pzI5vYfgW64" target="_blank">► </a></h3>
+                          <h3><span>5. Némesis (synth pop) </span><a href="https://youtu.be/Mw8xsQZwThk" target="_blank">► </a></h3>
+                          <h3><span>6. Nietzkov (electrónica house) </span><a href="https://youtu.be/KzsCQOXl2n0" target="_blank">►</a></h3>
+                        </div>
+                        <div class="row"> 
+                          <h3><span>7. Malas intenciones (rock) </span><a href="https://youtu.be/SF_EBMm12iY" target="_blank">► </a></h3>
+                          <h3><span>8. Manu Portugal (pop rock) </span><a href="https://youtu.be/0Ob9tMTEdN8" target="_blank">► </a></h3>
+                          <h3><span>9. Paranoid (metal rock) </span><a href="https://youtu.be/Jffq4ZnQrs8" target="_blank">► </a></h3>
+                          <h3><span>10. Trikozan (rock) </span><a href="https://youtu.be/iSuo0SDGFB8" target="_blank">► </a></h3>
+                          <h3><span>11. Trivial (rock'n pop) </span><a href="https://youtu.be/EiV_c0xZhPQ" target="_blank">► </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Huanuco|-End--->
+                    <!--Huaraz|-Start--->
+                    <div class="Ticket" data-nom-entidad="huaraz">
+                      <div class="Ticket-title">Música en Huaraz</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content"> 
+                          <p>Hemos recopilado actualmente <span>11</span> bandas de Huaraz. Si conoces alguna más, <a href="https://www.facebook.com/RockAchorao/" target="_blank">escríbenos.</a></p>
+                        </div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="row">
+                          <h3><span>1. Aldzeimer (pop rock) </span><a href="https://youtu.be/GTY6yZwyRUU" target="_blank">► </a></h3>
+                          <h3><span>2. Breezelyzer (experimental avantgarde, electronic) </span><a href="https://breezelyzer.bandcamp.com/releases" target="_blank">► </a></h3>
+                          <h3><span>3. Daszenmachine (electrónica) </span><a href="http://goo.gl/WroJGf" target="_blank">► </a></h3>
+                          <h3><span>4. La Sombra (post punk/new wave) </span><a href="https://youtu.be/pzI5vYfgW64" target="_blank">► </a></h3>
+                          <h3><span>5. Némesis (synth pop) </span><a href="https://youtu.be/Mw8xsQZwThk" target="_blank">► </a></h3>
+                        </div>
+                        <div class="row">
+                          <h3><span>6. Nietzkov (electrónica house) </span><a href="https://youtu.be/KzsCQOXl2n0" target="_blank">► </a></h3>
+                          <h3><span>7. Malas intenciones (rock) </span><a href="https://youtu.be/SF_EBMm12iY" target="_blank">► </a></h3>
+                          <h3><span>8. Manu Portugal (pop rock) </span><a href="https://youtu.be/0Ob9tMTEdN8" target="_blank">► </a></h3>
+                          <h3><span>9. Paranoid (metal rock) </span><a href="https://youtu.be/Jffq4ZnQrs8" target="_blank">► </a></h3>
+                          <h3><span>10. Trikozan (rock) </span><a href="https://youtu.be/iSuo0SDGFB8" target="_blank">► </a></h3>
+                          <h3><span>11. Trivial (rock'n pop) </span><a href="https://youtu.be/EiV_c0xZhPQ" target="_blank">► </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Huaraz|-End--->
+                    <!--Ica|-Start--->
+                    <div class="Ticket" data-nom-entidad="ica">
+                      <div class="Ticket-title">Música en Ica</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content"> 
+                          <p>Hemos recopilado actualmente <span>11</span> bandas de Ica. Si conoces alguna más, <a href="https://www.facebook.com/RockAchorao/" target="_blank">escríbenos.</a></p>
+                        </div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="row">
+                          <h3><span>1. Aldzeimer (pop rock) </span><a href="https://youtu.be/GTY6yZwyRUU" target="_blank">► </a></h3>
+                          <h3><span>2. Breezelyzer (experimental avantgarde, electronic) </span><a href="https://breezelyzer.bandcamp.com/releases" target="_blank">► </a></h3>
+                          <h3><span>3. Daszenmachine (electrónica) </span><a href="http://goo.gl/WroJGf" target="_blank">► </a></h3>
+                          <h3><span>4. La Sombra (post punk/new wave) </span><a href="https://youtu.be/pzI5vYfgW64" target="_blank">► </a></h3>
+                          <h3><span>5. Némesis (synth pop) </span><a href="https://youtu.be/Mw8xsQZwThk" target="_blank">► </a></h3>
+                          <h3><span>6. Nietzkov (electrónica house) </span><a href="https://youtu.be/KzsCQOXl2n0" target="_blank">► </a></h3>
+                          <h3><span>7. Malas intenciones (rock) </span><a href="https://youtu.be/SF_EBMm12iY" target="_blank">► </a></h3>
+                          <h3><span>8. Manu Portugal (pop rock) </span><a href="https://youtu.be/0Ob9tMTEdN8" target="_blank">► </a></h3>
+                          <h3><span>9. Paranoid (metal rock) </span><a href="https://youtu.be/Jffq4ZnQrs8" target="_blank">► </a></h3>
+                          <h3><span>10. Trikozan (rock) </span><a href="https://youtu.be/iSuo0SDGFB8" target="_blank">► </a></h3>
+                          <h3><span>11. Trivial (rock'n pop) </span><a href="https://youtu.be/EiV_c0xZhPQ" target="_blank">► </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Ica|-End--->
+                    <!--Iquitos|-Start--->
+                    <div class="Ticket" data-nom-entidad="iquitos">
+                      <div class="Ticket-title">Música en Iquitos</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content"> 
+                          <p>Hemos recopilado actualmente <span>11</span> bandas de Iquitos. Si conoces alguna más, <a href="https://www.facebook.com/RockAchorao/" target="_blank">escríbenos.</a></p>
+                        </div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="row">
+                          <h3><span>1. Aldzeimer (pop rock) </span><a href="https://youtu.be/GTY6yZwyRUU" target="_blank">► </a></h3>
+                          <h3><span>2. Breezelyzer (experimental avantgarde, electronic) </span><a href="https://breezelyzer.bandcamp.com/releases" target="_blank">► </a></h3>
+                          <h3><span>3. Daszenmachine (electrónica) </span><a href="http://goo.gl/WroJGf" target="_blank">► </a></h3>
+                          <h3><span>4. La Sombra (post punk/new wave) </span><a href="https://youtu.be/pzI5vYfgW64" target="_blank">► </a></h3>
+                          <h3><span>5. Némesis (synth pop) </span><a href="https://youtu.be/Mw8xsQZwThk" target="_blank">► </a></h3>
+                          <h3><span>6. Nietzkov (electrónica house) </span><a href="https://youtu.be/KzsCQOXl2n0" target="_blank">► </a></h3>
+                          <h3><span>7. Malas intenciones (rock) </span><a href="https://youtu.be/SF_EBMm12iY" target="_blank">► </a></h3>
+                          <h3><span>8. Manu Portugal (pop rock) </span><a href="https://youtu.be/0Ob9tMTEdN8" target="_blank">► </a></h3>
+                          <h3><span>9. Paranoid (metal rock) </span><a href="https://youtu.be/Jffq4ZnQrs8" target="_blank">► </a></h3>
+                          <h3><span>10. Trikozan (rock) </span><a href="https://youtu.be/iSuo0SDGFB8" target="_blank">► </a></h3>
+                          <h3><span>11. Trivial (rock'n pop) </span><a href="https://youtu.be/EiV_c0xZhPQ" target="_blank">► </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Iquitos|-End--->
+                    <!--La Oroya|-Start--->
+                    <div class="Ticket" data-nom-entidad="laoroya">
+                      <div class="Ticket-title">Música en La Oroya</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content"> 
+                          <p>Hemos recopilado actualmente <span>11</span> bandas de La Oroya. Si conoces alguna más, <a href="https://www.facebook.com/RockAchorao/" target="_blank">escríbenos.</a></p>
+                        </div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="row">
+                          <h3><span>1. Aldzeimer (pop rock) </span><a href="https://youtu.be/GTY6yZwyRUU" target="_blank">► </a></h3>
+                          <h3><span>2. Breezelyzer (experimental avantgarde, electronic) </span><a href="https://breezelyzer.bandcamp.com/releases" target="_blank">► </a></h3>
+                          <h3><span>3. Daszenmachine (electrónica) </span><a href="http://goo.gl/WroJGf" target="_blank">► </a></h3>
+                          <h3><span>4. La Sombra (post punk/new wave) </span><a href="https://youtu.be/pzI5vYfgW64" target="_blank">► </a></h3>
+                          <h3><span>5. Némesis (synth pop) </span><a href="https://youtu.be/Mw8xsQZwThk" target="_blank">► </a></h3>
+                          <h3><span>6. Nietzkov (electrónica house) </span><a href="https://youtu.be/KzsCQOXl2n0" target="_blank">► </a></h3>
+                          <h3><span>7. Malas intenciones (rock) </span><a href="https://youtu.be/SF_EBMm12iY" target="_blank">► </a></h3>
+                          <h3><span>8. Manu Portugal (pop rock) </span><a href="https://youtu.be/0Ob9tMTEdN8" target="_blank">► </a></h3>
+                          <h3><span>9. Paranoid (metal rock) </span><a href="https://youtu.be/Jffq4ZnQrs8" target="_blank">► </a></h3>
+                          <h3><span>10. Trikozan (rock) </span><a href="https://youtu.be/iSuo0SDGFB8" target="_blank">► </a></h3>
+                          <h3><span>11. Trivial (rock'n pop) </span><a href="https://youtu.be/EiV_c0xZhPQ" target="_blank">► </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!--La Oroya|-End--->
+                    <!--Oxapampa|-Start--->
+                    <div class="Ticket" data-nom-entidad="oxapampa">
+                      <div class="Ticket-title">Música en Oxapampa</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content"> 
+                          <p>Hemos recopilado actualmente <span>11</span> bandas de Oxapampa. Si conoces alguna más, <a href="https://www.facebook.com/RockAchorao/" target="_blank">escríbenos.</a></p>
+                        </div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="row">
+                          <h3><span>1. CAOBA (pop rock blues) </span><a href="https://www.youtube.com/watch?v=S9c3fP0NwuE" target="_blank">► </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Oxapampa|-End--->
+                    <!--Piura|-Start--->
+                    <div class="Ticket" data-nom-entidad="piura">
+                      <div class="Ticket-title">Música en Piura</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content"> 
+                          <p>Hemos recopilado actualmente <span>11</span> bandas de Piura. Si conoces alguna más, <a href="https://www.facebook.com/RockAchorao/" target="_blank">escríbenos.</a></p>
+                        </div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="row">
+                          <h3><span>1. 7 Trips (Dubstep) </span><a href="https://youtu.be/GTY6yZwyRUU" target="_blank">► </a></h3>
+                          <h3><span>2.Shokekos (ska punk) </span><a href="https://breezelyzer.bandcamp.com/releases" target="_blank">► </a></h3>
+                          <h3><span>3. Deskalibra2 (punk) </span><a href="http://goo.gl/WroJGf" target="_blank">► </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Piura|-End--->
+                    <!--Pucallpa|-Start--->
+                    <div class="Ticket" data-nom-entidad="pucallpa">
+                      <div class="Ticket-title">Música en Pucallpa</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content"> 
+                          <p>Hemos recopilado actualmente <span>11</span> bandas de Pucallpa. Si conoces alguna más, <a href="https://www.facebook.com/RockAchorao/" target="_blank">escríbenos.</a></p>
+                        </div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="row">
+                          <h3><span>1. Far Away (rock alternativo) </span><a href="https://www.youtube.com/watch?v=DgUAV7nU6m8" target="_blank">► </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Pucallpa|-End--->
+                    <!--La Oroya|-Start--->
+                    <div class="Ticket" data-nom-entidad="puno">
+                      <div class="Ticket-title">Música en Puno</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content"> 
+                          <p>Hemos recopilado actualmente <span>8</span> bandas de Puno. Si conoces alguna más, <a href="https://www.facebook.com/RockAchorao/" target="_blank">escríbenos.</a></p>
+                        </div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="row">
+                          <h3><span>1. Cancharani (rock) </span><a href="http://youtu.be/1UFUAwSfNWA" target="_blank">► </a></h3>
+                          <h3><span>2. Carlos Caz (heavy metal) </span><a href="http://youtu.be/bUzXJ1zqiko" target="_blank">► </a></h3>
+                          <h3><span>3. Clerigo (heavy metal) </span><a href="http://youtu.be/4816rvt5h2M" target="_blank">► </a></h3>
+                          <h3><span>4. Karma (metal rock fusión) </span><a href="http://youtu.be/zy1yhHPVwW4" target="_blank">► </a></h3>
+                          <h3><span>5. Los primos (punk rock) </span><a href="https://youtu.be/Mw8xsQZwThk" target="_blank">► </a></h3>
+                          <h3><span>6. Masturbanda (rock) </span><a href="http://youtu.be/2oogxGXl2_Q" target="_blank">► </a></h3>
+                          <h3><span>7. Peatones (rock) </span><a href="http://youtu.be/Spe7iCV6x4I" target="_blank">► </a></h3>
+                          <h3><span>8. Rockpata (rock fusión]) </span><a href="http://youtu.be/c8Pz8h5RJo4" target="_blank">► </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Puno|-End--->
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="overlay__item" id="preview-2">
+            <section class="MainContent is-visible" data-nom="banca-internet">
+              <div class="MainContent-header">
+                <div class="GrupoSlides">
+                  <!--SlideFinancieras: Pago por internet - Sucursal-->
+                  <div class="SlideFinancieras SlideFinancieras--generos is-visible" data-nom="generos">
+                    <div class="SlideFinancieras-slideWrapper">
+                      <div class="SlideFinancieras-listButtons">   </div>
+                      <div class="SlideFinancieras-list">
+                        <div class="SlideFinancieras-item">
+                          <div class="link-wrapper"><a class="link seleccionado" href="#" data-nom-entidad="grunge"><img src="source/img/generos/grunge.jpg" alt="grunge"></a></div>
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="funk"><img src="source/img/generos/funk.jpg" alt="funk"></a></div>
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="ska"><img src="source/img/generos/ska.jpg" alt="ska"></a></div>
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="blues"><img src="source/img/generos/blues.jpg" alt="blues"></a></div>
+                        </div>
+                        <div class="SlideFinancieras-item">       
+                          <div class="link-wrapper"><a class="link" href="#" data-nom-entidad="reggae"><img src="source/img/generos/reggae.jpg" alt="reggae"></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="MainContent-content">
+                <!--ProcedimientoPago-->
+                <div class="ProcedimientoPago">
+                  <!--Grupo Tickets - Personas-->
+                  <div class="GrupoTickets" data-nom="personas">
+                    <!--Start Grunge-->
+                    <div class="Ticket is-visible" data-nom-entidad="grunge">
+                      <div class="Ticket-title">Grunge hecho en el Perú</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content"> 
+                          <p>Hemos recopilado actualmente <span>71</span> bandas de Grunge hecho en el Perú. Si conoces alguna más, <a href="https://www.facebook.com/RockAchorao/" target="_blank">escríbenos.</a></p>
+                        </div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="row">
+                          <h3>
+                            <span>1. Huelga de hambre</span><a href="http://youtu.be/NxRKbtpOVbw" target="_blank">►</a>          </h3>
+                          <h3><span>2. Actitud Frenética </span><a href="http://youtu.be/jAr8jKEiabc" target="_blank">► </a></h3>
+                          <h3><span>3. Arcana Perú </span><a href="http://youtu.be/wx8GduzGs8M" target="_blank">► </a></h3>
+                          <h3><span>4. Banda SoMa </span><a href="http://youtu.be/wJyeFygIDqA" target="_blank">► </a></h3>
+                          <h3><span>5. Planeador <span>(Arequipa) </span> <a href="http://youtu.be/jRHPZbeb-S8" target="_blank">► </a></h3>
+                          <h3><span>6. Matando tu F.E </span><a href="http://youtu.be/ESDnXTZr8go" target="_blank">► </a></h3>
+                          <h3><span>7. Valium </span><a href="http://youtu.be/ocymj0KyJaA" target="_blank">► </a></h3>
+                          <h3><span>8. Scream </span><a href="http://youtu.be/d-1PuxxWENg" target="_blank">► </a></h3>
+                          <h3><span>9. Vertical </span><a href="http://www.pervertical.com/" target="_blank">► </a></h3>
+                          <h3><span>10. GAIA </span><a href="http://youtu.be/KkSlPSWYPEQ" target="_blank">► </a></h3>
+                          <h3><span>11. Genoma </span><a href="http://youtu.be/dtvOCmMJdo8" target="_blank">► </a></h3>
+                          <h3><span>12. Aeria </span><a href="http://youtu.be/kpEOhMGAP8w" target="_blank">► </a></h3>
+                          <h3><span>13. Exentos </span><a href="http://youtu.be/rkcGGxvIeXI" target="_blank">► </a></h3>
+                          <h3><span>14. Mahatma Rock Perú </span><a href="http://youtu.be/enMCT3ULTwo" target="_blank">► </a></h3>
+                          <h3><span>15. E.T.C </span><a href="http://youtu.be/FUDiYluW8KU" target="_blank">► </a></h3>
+                          <h3><span>16. Nidevainas </span><a href="http://www.myspace.com/nidevainas" target="_blank">► </a></h3>
+                          <h3><span>17. Radiomotor </span><a href="http://youtu.be/dUt5vXaBBdg" target="_blank">► </a></h3>
+                          <h3><span>18. BloodOf Fools </span><a href="http://youtu.be/hD_TVOPXfH8" target="_blank">► </a></h3>
+                          <h3><span>19. Totem </span><a href="http://youtu.be/2w9QDsIer3Q" target="_blank">► </a></h3>
+                          <h3><span>20. Detonador (Arequipa) </span><a href="http://youtu.be/mTdQcwHCx80" target="_blank">►     </a></h3>
+                          <h3><span>21. OLAF </span><a href="http://youtu.be/bNpJuaXu0H8" target="_blank">► </a></h3>
+                          <h3><span>22. Cicuta (Huancayo) </span><a href="http://youtu.be/nfzAuCVC2Kg" target="_blank">► </a></h3>
+                          <h3><span>23. Arbol de Fuego </span><a href="http://youtu.be/OhziO5z4aZc" target="_blank">► </a></h3>
+                          <h3><span>24. Liken </span><a href="http://youtu.be/GPsJpeDH9XQ" target="_blank">► </a></h3>
+                          <h3><span>25. Mauser </span><a href="http://youtu.be/qjmSJRKUF3U" target="_blank">► </a></h3>
+                          <h3><span>26. Emergency Blanket </span><a href="http://youtu.be/tvhsxZiW_7I" target="_blank">► </a></h3>
+                          <h3><span>27. Kuraka </span><a href="http://youtu.be/uZTG4YExdDk" target="_blank">► </a></h3>
+                          <h3><span>28. Abulia</span><a href="https://www.youtube.com/watch?v=vtX9qOQSIbk" target="_blank">► </a></h3>
+                          <h3><span>29. Los Beatniks </span><a href="https://www.youtube.com/watch?v=jmaFpszwK4s" target="_blank">► </a></h3>
+                          <h3><span>30. Retroacción</span><a href="https://www.youtube.com/watch?v=fmDF4luh9fY" target="_blank">► </a></h3>
+                          <h3><span>31. Malhaber </span><a href="https://www.youtube.com/watch?v=rzEMqZArMzk" target="_blank">► </a></h3>
+                          <h3><span>32. Cruz de hierro </span><a href="https://www.youtube.com/watch?v=gNCI_r3txIM" target="_blank">► </a></h3>
+                          <h3><span>33. Dura sangre </span><a href="https://www.youtube.com/watch?v=mNRqfxFPMlo" target="_blank">► </a></h3>
+                          <h3><span>34. QuoVadis </span><a href="https://www.youtube.com/watch?v=flSghWNtp8o" target="_blank">► </a></h3>
+                          <h3><span>35. Muertos tus sueños </span><a href="https://www.youtube.com/watch?v=RaRJUx4xkeg" target="_blank">► </a></h3>
+                        </div>
+                        <div class="row">
+                          <h3><span>36. El monje loco </span><a href="https://www.youtube.com/watch?v=Vq_DRVhfYPE" target="_blank">► </a></h3>
+                          <h3><span>37. Transmigración</span><a href="https://www.youtube.com/watch?v=ecWtDVTmp7E" target="_blank">► </a></h3>
+                          <h3><span>38. Trash Médula (Arequipa)</span><a href="https://youtu.be/Ya1fBRMRo5Q" target="_blank">► </a></h3>
+                          <h3><span>39. Soda Caustica</span><a href="https://www.youtube.com/watch?v=RsMS9Gka2rI" target="_blank">► </a></h3>
+                          <h3><span>40. Viejos necios </span><a href="https://www.youtube.com/watch?v=8OrpApQnYDM" target="_blank">► </a></h3>
+                          <h3><span>41. J.A.M</span><a href="https://www.youtube.com/watch?v=k-YwGj1b1qw" target="_blank">► </a></h3>
+                          <h3><span>42. Camuflaje </span><a href="https://www.youtube.com/watch?v=vnFOKv0rLp4" target="_blank">► </a></h3>
+                          <h3><span>43. SlanFer </span><a href="http://youtu.be/kZw562aekms" target="_blank">► </a></h3>
+                          <h3><span>44. Atomos De SION </span><a href="http://youtu.be/w-N4ysNVyW0" target="_blank">► </a></h3>
+                          <h3><span>45. Plaza cutervo <a href="https://www.youtube.com/watch?v=JMhRXGc3tgI" target="_blank">► </a></h3>
+                          <h3><span>46. Them Barrels </span><a href="https://soundcloud.com/thembarrels" target="_blank">►  </a></h3>
+                          <h3><span>47. Milf </span><a href="https://youtu.be/gcwYlUDqsnQ" target="_blank">► </a></h3>
+                          <h3><span>48. Deadkatz </span><a href="https://youtu.be/yrB1qlYCfT0" target="_blank">► </a></h3>
+                          <h3><span>49. La Cápsula </span><a href="https://youtu.be/LVjlOQ6ephg" target="_blank">► </a></h3>
+                          <h3><span>50. Qvimera </span><a href="https://youtu.be/VHc2EPsVYos" target="_blank">►  </a></h3>
+                          <h3><span>51. Muro de Balas </span><a href="https://youtu.be/u21CGxeR-vU" target="_blank">► </a></h3>
+                          <h3><span>52. Black Lion </span><a href="http://youtu.be/D2aAdf9_5rM" target="_blank">► </a></h3>
+                          <h3><span>53. Altervox </span><a href="https://soundcloud.com/altervox" target="_blank">► </a></h3>
+                          <h3><span>54. Conspiracy </span><a href="https://youtu.be/I-Qc2vNkehU" target="_blank">► </a></h3>
+                          <h3><span>55. Navaja </span><a href="https://soundcloud.com/navajaperu" target="_blank">► </a></h3>
+                          <h3><span>56. Asilo Arkham </span><a href="https://youtu.be/XrrauK1HdpA" target="_blank">► </a></h3>
+                          <h3><span>57. Patito de Hule </span><a href="https://youtu.be/-oXRpr5iSE8" target="_blank">► </a></h3>
+                          <h3><span>58. Lupanar Rock </span><a href="https://youtu.be/NnL5BoptbnA" target="_blank">► </a></h3>
+                          <h3><span>59. Pradhana <span>(rock alternativo) </span><a href="https://soundcloud.com/pradhanaofficial" target="_blank">►  </a></h3>
+                          <h3><span>60. The Guinea Pigs </span><a href="https://soundcloud.com/theguineapigsrockperu" target="_blank">► </a></h3>
+                          <h3><span>61. Mercado Negro </span><a href="https://soundcloud.com/mercado-negro-band" target="_blank">► </a></h3>
+                          <h3><span>62. _bas </span><a href="http://bastardo-anti-social.bandcamp.com/" target="_blank">► </a></h3>
+                          <h3><span>63. Mo.No  </span><a href="https://soundcloud.com/mo-no-14" target="_blank">►  </a></h3>
+                          <h3><span>64. Siatica Rock (Ayacucho) </span><a href="https://youtu.be/qDxbU3bmbF8" target="_blank">► </a></h3>
+                          <h3><span>65. @bLuNdEr </span><a href="https://soundcloud.com/blunderplus" target="_blank">► </a></h3>
+                          <h2>BONUS</h2>
+                          <p>Bandas de otros géneros haciendo grunge      </p>
+                          <h3><span>66. G3 </span><a href="http://youtu.be/lA9FWefmqtQ" target="_blank">► </a></h3>
+                          <h3><span>67. ...Por Hablar </span><a href="http://youtu.be/5drSmhaoAGw" target="_blank">►  </a></h3>
+                          <h3><span>68. Dmente Comun </span><a href="http://youtu.be/sdalQwsxNRY" target="_blank">► </a></h3>
+                          <h3><span>69. Los Zopilotes </span><a href="http://youtu.be/o3a42Xq0jPA" target="_blank">► </a></h3>
+                          <h3><span>70. Rafo Ráez </span><a href="http://youtu.be/8b1BcclxOF0" target="_blank">► </a></h3>
+                          <h3><span>71. The Jam Sex Roller </span><a href="http://youtu.be/lKfW-R-07KM" target="_blank">► </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End Grunge-->
+                    <!--Start Funk-->
+                    <div class="Ticket is-visible" data-nom-entidad="funk">
+                      <div class="Ticket-title">Funk hecho en el Perú</div>
+                      <div class="Ticket-guia"> 
+                        <div class="guia-content"> 
+                          <p>Hemos recopilado actualmente <span>71</span> bandas de Funk hecho en el Perú. Si conoces alguna más, <a href="https://www.facebook.com/RockAchorao/" target="_blank">escríbenos.</a></p>
+                        </div>
+                      </div>
+                      <div class="Ticket-content">
+                        <div class="row">
+                          <h3>
+                            <span>1. Acid Hamelin</span><a href="http://youtu.be/EkBJpjPnmB4" target="_blank">►</a>          </h3>
+                          <h3><span>2. Mezcal </span><a href="http://youtu.be/5Z3lSz94SlM" target="_blank">► </a></h3>
+                          <h3><span>3. La Roja </span><a href="http://youtu.be/0TfqwHGNSpM" target="_blank">► </a></h3>
+                          <h3><span>4. La Sonora BeatBox </span><a href="http://youtu.be/XmJplRPwvLU" target="_blank">► </a></h3>
+                          <h3><span>5. Cinco esquinas  </span> <a href="https://myspace.com/5esquinas/music/songs" target="_blank">► </a></h3>
+                          <h3><span>6. Big Pollo<a href="http://youtu.be/0skwH0BdQMU" target="_blank">► </a></h3>
+                          <h3><span>7. Diablos Azules <a href="http://youtu.be/X2wdpadrcSs" target="_blank">► </a></h3>
+                          <h3><span>8. Mader Funker <a href="http://youtu.be/h9hkR68TXO0" target="_blank">► </a></h3>
+                          <h3><span>9. Vanilla Funk <a href="http://youtu.be/0gVrJSzaRRo" target="_blank">► </a></h3>
+                          <h3><span>10. La Chicharra Paralizadora<a href="http://youtu.be/NDsAMMOoUpU" target="_blank">► </a></h3>
+                          <h3><span>11. Chingo Dingo <a href="http://chingodingo.bandcamp.com/" target="_blank">► </a></h3>
+                          <h3><span>12. Katana Funk <a href="http://youtu.be/uZ23jGe03xA" target="_blank">► </a></h3>
+                          <h3><span>13. Exentos <a href="http://youtu.be/rkcGGxvIeXI" target="_blank">► </a></h3>
+                          <h3><span>14. Mahatma Rock Perú <a href="http://youtu.be/enMCT3ULTwo" target="_blank">► </a></h3>
+                          <h3><span>15. E.T.C <a href="http://youtu.be/FUDiYluW8KU" target="_blank">► </a></h3>
+                          <h3><span>16. Nidevainas <a href="http://www.myspace.com/nidevainas" target="_blank">► </a></h3>
+                          <h3><span>17. Radiomotor <a href="http://youtu.be/dUt5vXaBBdg" target="_blank">► </a></h3>
+                          <h3><span>18. BloodOf Fools <a href="http://youtu.be/hD_TVOPXfH8" target="_blank">► </a></h3>
+                          <h3><span>19. Totem <a href="http://youtu.be/2w9QDsIer3Q" target="_blank">► </a></h3>
+                          <h3><span>20. Detonador (Arequipa) </span><a href="http://youtu.be/mTdQcwHCx80" target="_blank">►     </a></h3>
+                          <h3><span>21. OLAF <a href="http://youtu.be/bNpJuaXu0H8" target="_blank">► </a></h3>
+                          <h3><span>22. Cicuta (Huancayo) </span><a href="http://youtu.be/nfzAuCVC2Kg" target="_blank">► </a></h3>
+                          <h3><span>23. Arbol de Fuego <a href="http://youtu.be/OhziO5z4aZc" target="_blank">► </a></h3>
+                          <h3><span>24. Liken <a href="http://youtu.be/GPsJpeDH9XQ" target="_blank">► </a></h3>
+                          <h3><span>25. Mauser <a href="http://youtu.be/qjmSJRKUF3U" target="_blank">► </a></h3>
+                          <h3><span>26. Emergency Blanket <a href="http://youtu.be/tvhsxZiW_7I" target="_blank">► </a></h3>
+                          <h3><span>27. Kuraka <a href="http://youtu.be/uZTG4YExdDk" target="_blank">► </a></h3>
+                          <h3><span>28. Abulia<a href="https://www.youtube.com/watch?v=vtX9qOQSIbk" target="_blank">► </a></h3>
+                          <h3><span>29. La vie <a href="http://youtu.be/echru1z5hkmr" target="_blank">► </a></h3>
+                          <h3><span>30. Legión sacra <a href="https://www.youtube.com/watch?v=rWNXL4pUVig" target="_blank">► </a></h3>
+                          <h3><span>31. Llantas negras <a href="https://youtu.be/hsUgiE2iKpU" target="_blank">► </a></h3>
+                          <h3><span>32. Los Chapillacs <a href="https://youtu.be/vQYMxDyq9Lc" target="_blank">► </a></h3>
+                          <h3><span>33. Los death monkeys <a href="https://youtu.be/ktOKmEZMnZI" target="_blank">► </a></h3>
+                          <h3><span>34. Los flechados <a href="http://youtu.be/jmdqmc1jble" target="_blank">► </a></h3>
+                          <h3><span>35. Los monkiss <a href="https://youtu.be/XBJ3R3RLM7g" target="_blank">► </a></h3>
+                        </div>
+                        <div class="row">
+                          <h3><span>36. Los paicons <a href="https://soundcloud.com/sucio-records/huachito-de-loteria-los" target="_blank">► </a></h3>
+                          <h3><span>37. Mambala <a href="https://youtu.be/0uYexAxSqvk" target="_blank">► </a></h3>
+                          <h3><span>38. ManiaC <a href="https://youtu.be/Ya1fBRMRo5Q" target="_blank">► </a></h3>
+                          <h3><span>39. Mudra <a href="http://youtu.be/zhz_rb_3xcg" target="_blank">► </a></h3>
+                          <h3><span>40. Mulamuerta <a href="https://youtu.be/4KVUl1FalEQ" target="_blank">► </a></h3>
+                          <h3><span>41. Natural Misti <a href="https://youtu.be/3fqh1-abBGo" target="_blank">► </a></h3>
+                          <h3><span>42. Nodo <a href="https://soundcloud.com/mias/nodo-dinamica-del-viento-y-el-mar" target="_blank">► </a></h3>
+                          <h3><span>43. Noir <a href="https://youtu.be/eGK6SjmcY60" target="_blank">► </a></h3>
+                          <h3><span>44. Nousvlid <a href="https://youtu.be/r8o5uD7rtTQ" target="_blank">► </a></h3>
+                          <h3><span>45. Orquidea <a href="https://youtu.be/AU4CcvZHPII" target="_blank">► </a></h3>
+                          <h3><span>46. Oscuro <a href="https://youtu.be/n5FZi5oh5Pw" target="_blank">►  </a></h3>
+                          <h3><span>47. Persepolis <a href="https://youtu.be/PJZzUdHqviQ" target="_blank">► </a></h3>
+                          <h3><span>48. Peter Pedro <a href="https://youtu.be/9VMjLrEYgoY" target="_blank">► </a></h3>
+                          <h3><span>49. Pez Revolver <a href="http://youtu.be/8MCInYfGxpg" target="_blank">► </a></h3>
+                          <h3><span>50. Platónica <a href="http://youtu.be/I_dW5-iIkZk" target="_blank">►  </a></h3>
+                          <h3><span>51. Quilluya <a href="https://soundcloud.com/quilluya/nanaq-miskilla" target="_blank">► </a></h3>
+                          <h3><span>52. Rock and Rose <span>(soft rock) </span><a href="http://youtu.be/1cPS-wUVW4s" target="_blank">► </a></h3>
+                          <h3><span>53. Roncha Kills <span>(hardcore punk) </span><a href="https://soundcloud.com/ronchakills" target="_blank">► </a></h3>
+                          <h3><span>54. S-23 <span>(nu metal/post grunge) </span><a href="https://youtu.be/45XClQB89UI" target="_blank">► </a></h3>
+                          <h3><span>55. Southern Lions <span>(nu metal, metalcore) </span><a href="https://youtu.be/-t2YYf9FZ24" target="_blank">► </a></h3>
+                          <h3><span>56. Stonearth <span>(stoner rock) </span><a href="https://soundcloud.com/spiralarips/stonearth-entre-mis-manos" target="_blank">► </a></h3>
+                          <h3><span>57. Synhysteria <span>(blues rock) </span><a href="https://youtu.be/D7L58tE2lzk" target="_blank">► </a></h3>
+                          <h3><span>58. The lunes <span>(indie rock) </span><a href="https://soundcloud.com/the-lunes" target="_blank">► </a></h3>
+                          <h3><span>59. The orange room <span>(rock alternativo) </span><a href="https://youtu.be/yiiIOyuLRsE" target="_blank">►  </a></h3>
+                          <h3><span>60. The play <span>(indie rock) </span><a href="https://youtu.be/dRh4VEK3RBg" target="_blank">► </a></h3>
+                          <h3><span>61. Tony Danza <span>(math rock/post hardcore) </span><a href="https://youtu.be/pQaJccKjXTc" target="_blank">► </a></h3>
+                          <h3><span>62. Trepanador <span>(death metal) </span><a href="https://youtu.be/4UVwcO3Yhio" target="_blank">► </a></h3>
+                          <h3><span>63. Trustor <span>(thrash metal) </span><a href="https://youtu.be/fsmKjsxN2gs" target="_blank">►  </a></h3>
+                          <h3><span>64. Túpac yufunkuy <span>(funk) </span><a href="https://youtu.be/Jd8gzYQHNtA" target="_blank">► </a></h3>
+                          <h3><span>65. X Dinero <span>(ska/ rock ligero) </span><a href="https://www.youtube.com/watch?v=vzu2_LOXD4M" target="_blank">► </a></h3>
+                          <h2>BONUS      </h2>
+                          <h3><span>66. Los incognitos <span>(rock 60s) </span><a href="https://youtu.be/VtJNssN8OmE" target="_blank">► </a></h3>
+                          <h3><span>67. Los texao <span>(rock garage 60s) </span><a href="https://youtu.be/lxFdf71vsuw" target="_blank">►  </a></h3>
+                          <h3><span>68. Free love system <span>(rock psicodélico 70s) </span><a href="https://youtu.be/sC29t6yYsbs" target="_blank">► </a></h3>
+                          <h3><span>69. Baretto <span>(soft rock, progre 80-90s) </span><a href="https://youtu.be/KOTM78es1xQ" target="_blank">► </a></h3>
+                          <h3><span>70. Playa cero <span>(rock, reggae 90s) </span><a href="https://youtu.be/nODQJhpwq1M" target="_blank">► </a></h3>
+                          <h3><span>71. Konflicto interno <span>(anarkopunk 90s) </span><a href="https://youtu.be/eIcsnXKcSK4" target="_blank">► </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End Funk-->
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="overlay__item" id="preview-3">
+            <!--MainContent - Banca por Internet-->
+            <section class="MainContent is-visible" data-nom="espacios-virtuales">
+              <div class="MainContent-header">
+                <div class="GrupoDropdown">
+                  <select class="browser-default" id="dropdown">
+                    <option value="1">Espacios</option>
+                    <option value="2">Espacios fuera de Lima</option>
+                    <option value="3">Espacios por estilos</option>
+                  </select>
+                </div>
+              </div>
+              <div class="MainContent-content">
+                <!--ProcedimientoPago-->
+                <div class="ProcedimientoPago">
+                  <!--Grupo Tickets - Personas-->
+                  <div class="GrupoTickets">
+                    <div class="espacios-content magazines is-visible">
+                      <p>Hola</p>
+                    </div>
+                    <div class="espacios-content magazines-provincia">
+                      <p>Hola provincia</p>
+                    </div>
+                    <div class="espacios-content magazines-estilos">
+                      <p>Hola estilos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <button class="overlay__close">
+            <svg class="icon icon--cross">
+              <use xlink:href="#icon-cross"></use>
+            </svg>
+          </button>
+        </div>
+      </main>
+    </div>
+    <!--Archivos de terceros-->
+    <script src="source/js/vendor/jquery.min.js"></script>
+    <script src="source/js/vendor/jquery.validate.min.js"></script>
+    <script src="source/js/vendor/jquery.nicescroll.min.js"></script>
+    <script src="source/js/vendor/jquery.mask.min.js"></script>
+    <script src="source/js/vendor/slick.min.js"></script>
+    <script src="source/js/vendor/jquery.incredible.srcset.js"></script>
+    <script src="source/js/vendor/select2.min.js"></script>
+    <script src="source/js/vendor/imagesloaded.pkgd.min.js"></script>
+    <script src="source/js/vendor/TweenMax.min.js"></script>
+    <script src="source/js/vendor/demo.js"></script>
+    <!--Scripts propios-->
+    <script src="source/js/modules/countries-dropdown.js"></script>
+    <script src="source/js/modules/main-nav.js"></script>
+    <script src="source/js/modules/b2b-nav.js"></script>
+    <script src="source/js/modules/mybank-search-select.js"></script>
+    <script src="source/js/modules/main-content.js"></script>
+    <script src="source/js/modules/buscador-entidades.js"></script>
+    <script src="source/js/modules/slide-financieras.js"></script>
+    <script src="source/js/modules/ticket.js"></script>
+    <script src="source/js/modules/envio-instrucciones.js"></script>
+    <script src="source/js/modules/send-information-contracted--email.js"></script>
+    <script src="source/js/modules/instructions-by.js"></script>
+    <script src="source/js/app.js">   </script>
   </body>
 </html>

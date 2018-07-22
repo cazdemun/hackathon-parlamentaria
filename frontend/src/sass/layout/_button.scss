@@ -1,0 +1,66 @@
+/*---------------------------------------------------------------------------*
+ * Start: Button
+----------------------------------------------------------------------------*/
+
+// Own configuration
+$color-blue-safetypay:    #135699;
+$color-blue-dark-1:       #094179;
+$color-button       : $color-blue-safetypay;
+$color-button-hover : $color-blue-dark-1;
+
+.Button {
+  &, * { box-sizing:border-box; }
+
+  background: $color-button;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+  color: $c_blanco;
+  cursor: pointer;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 10px;
+  text-align: center;
+  width: 100%;
+  // font-size: 0;
+  display: block;
+  text-decoration: none;
+
+  &:hover {
+    background: $color-button-hover;
+  }
+  &:focus {
+    outline: none;
+  }
+  &.is-disabled,
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &--link {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &__icon {
+    background: transparent url("../img/sprite-icons.png") -90px 0 no-repeat;
+    background-size: 190px 100px;
+    display: inline-block;
+    height: 22px;
+    width: 22px;
+    line-height: 100%;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+  &__text {
+    vertical-align: middle;
+    font-size: 14px;
+  }
+}
+
+
+
+/*---------------------------------------------------------------------------*
+ * Endof: Button
+----------------------------------------------------------------------------*/

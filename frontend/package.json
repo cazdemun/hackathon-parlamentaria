@@ -1,16 +1,66 @@
 {
-  "name": "hackaton",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4"
-  },
+  "name": "safetypay-mexico",
+  "version": "1.0.0",
+  "description": "Front-End SafetyPay Mexico",
+  "main": "gulpfile.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod": "node prod_scripts.js",
+    "zip": "node zip_scripts.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com:safetypay/safetypay-mexico.git"
+  },
+  "keywords": [
+    "safetypay"
+  ],
+  "author": "Juan Cahuana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/safetypay/safetypay-mexico/issues"
+  },
+  "homepage": "https://gitlab.com/safetypay/safetypay-mexico/#README",
+  "frontend": {
+    "name": "Safetypay Mexico",
+    "stylesheets": "src/css",
+    "javascripts": "src/js"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "clean-css": "^4.1.9",
+    "del": "^2.2.2",
+    "folder-zip": "0.0.5",
+    "frontend-md": "0.0.4",
+    "fs-extra": "^0.30.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.4.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^2.1.2",
+    "gulp-watch": "^4.3.11",
+    "jshint": "^2.9.5",
+    "recursive-copy": "^2.0.6",
+    "replace": "^0.3.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "gulp-csvtojson": "^0.2.0",
+    "gulp-filter": "^5.1.0",
+    "gulp-install": "^1.1.0",
+    "materialize": "^1.0.0",
+    "materialize-css": "^0.98.2"
   }
 }

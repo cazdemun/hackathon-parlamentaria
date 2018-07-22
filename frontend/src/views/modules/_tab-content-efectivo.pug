@@ -1,0 +1,17 @@
+// PAGAR EN EFECTIVO
+section.tab-content.pago-en-efectivo#tab-efectivo
+  //- .TabsInternos
+    a.tab_button.btn_personas.is-active(href="#", data-tab-name="personas") Personas
+    a.tab_button.btn_empresas(href="#", data-tab-name="empresas") Empresas
+  
+  .TabsInternos-content.is-active
+    include ./_slide-financieras-efectivo.pug
+    include ./_formulario-datos-autenticacion-efectivo.pug
+    
+    //ProcedimientoPago
+    .ProcedimientoPago
+      include ./_ticket-pago-efectivo.pug
+      //- include ./_instrucciones-pago.pug
+      //- include ./_waiting-state.pug
+      //- include ./_envio-instrucciones-efectivo.pug
+      //- include ./_footer.pug

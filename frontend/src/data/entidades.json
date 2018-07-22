@@ -1,0 +1,118 @@
+{
+    "name": "Caso CNM",
+    "parent": "null",
+    "relation": "null",
+    "type": "Corrupción en el CNM y los vínculos con el fujimorismo",
+    "depth": 0,
+    "x1": 100,
+    "y1":0,
+    "children": [
+      {
+        "name": "Walter Ríos",
+        "parent": "DEF",
+        "relation": "ghi",
+        "depth": 1,
+        "type": "RENUNCIÓ. Presidente de la corte superior de justicia del Callao. Menciona que las gestiones con los consejeros Iván Noguera y Julio Gutiérrez para ratificar al juez Ricardo Chang los estaba haciendo Hinostroza.",
+        "x1": 150,
+        "y1":50,
+        "children": [
+          {
+            "name": "Nelson Aparicio",
+            "parent": "Walter Ríos",
+            "relation": "gh1a",
+            "type": "Asesor de Walter Ríos, junto a él elaboraron preguntas que no les correspondían para beneficiar a 'los amigos' en el examen de ascenso del CNM, convocado por Guido Aguila.",
+            "depth": 2,
+            "x1": 150,
+            "y1":100
+          },
+          {
+            "name": "José Luis Cavassa Roncalla",
+            "parent": "Walter Ríos",
+            "relation": "gh1b",
+            "depth": 2,
+            "type": "Fue denunciado en el 2000 por la masiva falsificación de firmas para la inscripción del partido fujimorista Perú 2000, mientras ocupó el cargo de gerente electoral de la ONPE. Ahora Cavassa trabaja como asesor informático en la universidad Telesup, de propiedad del excongresista y presidente del partido Podemos por el Progreso del Perú (PP), José Luna Gálvez.",
+            "x1": 150,
+            "y1":150
+          },
+          {
+            "name": "Aldo Mayorga",
+            "parent": "Walter Ríos",
+            "relation": "gh1c",
+            "depth": 2,
+            "type": "En una conversación telefónica, Ríos le propone a Aldo Mayorga, jefe de la unidad de Planeamiento y Desarrollo de la Corte, hacer cambios de personal para poder promover a Verónica Rojas Aguirre.",
+            "x1": 150,
+            "y1":200,
+            "children": [
+              {
+                "name": "Verónica Rojas",
+                "parent": "Aldo Mayorga",
+                "relation": "gh1c1",
+                "type": "Entonces encargada del Sistema de Gestión de Calidad ISO 9001 de la Corte del Callao.",
+                "depth": 2,
+                "x1": 150,
+                "y1":220
+              }
+            ]
+          },
+          {
+            "name": "José Luis Diaz Asto",
+            "parent": "Walter Ríos",
+            "relation": "gh1c",
+            "depth": 2,
+            "type": "Asesor de comunicaciones del presidente del Poder Judicial, Duberlí Rodríguez; llamó por teléfono a Walter Ríos, para invitarlo a un almuerzo al que asistirían, además de Duberlí Rodríguez, Salvador Heresi; el juez supremo Ángel Romero Díaz; el gerente general de IZA Motors, Antonio Camayo, y varios futbolistas de ese club deportivo.",
+            "x1": 150,
+            "y1":250,
+            "children": [
+              {
+                "name": "Duberlí Rodríguez",
+                "parent": "José Luis Diaz Asto",
+                "relation": "gh1d",
+                "type": "Presidente del Poder Judicial, se contacta con Walter Ríos a través de su asesor para invitarlo a un almuerzo.",
+                "depth": 2,
+                "x1": 200,
+                "y1":250
+              }
+            ]
+          },
+          {
+            "name": "Emperatriz Pérez Castillo",
+            "parent": "Walter Ríos",
+            "relation": "gh1d",
+            "depth": 2,
+            "type": "Walter Ríos la menciona como una persona clave en la que sería su designación como presidente de la Corte del Callao, preside actualmente la Sala Penal de Apelaciones Permanente de la Corte chalaca. Y es, además, la presidenta de la Sala que ve el caso de Manta y Vilca.",
+            "x1": 150,
+            "y1":300
+          },
+          {
+            "name": "Mario Mendoza",
+            "parent": "Walter Ríos",
+            "relation": "gh1e",
+            "depth": 2,
+            "type": "Walter Ríos llama por teléfono al empresario para pedirle que lo apoye con el proceso de ratificación del juez Chang. Este conversa con una persona que aparentemente trabaja en el CNM. Mendoza le dice a su interlocutor que recomendó al juez Ricardo Chang Racuay para su proceso de ratificación.El jueves 12 de abril este llama a un colaborador suyo para que le entregue al chofer de Walter Rios, dinero en efectivo y un archivo. Minutos después Walter Ríos lo llama para ofrecerle los servicios de un juez. ",
+            "x1": 300,
+            "y1":300
+          }
+        ]
+      },
+      {
+        "name": "Foo",
+        "parent": "DEF",
+        "relation": "rel",
+        "depth": 2,
+        "type": "cinco",
+        "x1": 200,
+        "y1":0,
+        "children": [
+              {
+                "name": "Mario Mendoza",
+                "parent": "Foo",
+                "relation": "gh1e",
+                "depth": 2,
+                "type": "Walter Ríos llama por teléfono al empresario para pedirle que lo apoye con el proceso de ratificación del juez Chang. Este conversa con una persona que aparentemente trabaja en el CNM. Mendoza le dice a su interlocutor que recomendó al juez Ricardo Chang Racuay para su proceso de ratificación.El jueves 12 de abril este llama a un colaborador suyo para que le entregue al chofer de Walter Rios, dinero en efectivo y un archivo. Minutos después Walter Ríos lo llama para ofrecerle los servicios de un juez. ",
+                "x1": 300,
+                "y1":300
+              }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,239 @@
+{
+  "entidades":[
+      {
+        "id":"bbva-bancomer",
+        "text":"BBVA Bancomer"
+      },
+      {
+        "id":"santander",
+        "text":"Santander"
+      },
+      {
+        "id":"scotiabank",
+        "text":"Scotiabank"
+      },
+      {
+        "id":"banorte",
+        "text":"Banorte"
+      },
+      {
+        "id":"banamex",
+        "text":"Banamex"
+      },
+      {
+        "id":"hsbc",
+        "text":"HSBC"
+      },
+      {
+        "id":"banco-azteca",
+        "text":"Banco Azteca"
+      },
+      {
+        "id":"inbursa",
+        "text":"Inbursa"
+      }  
+    ],
+  "tiendas":[
+    {
+      "id":"walmart",
+      "text":"Walmart"
+    },
+    {
+      "id":"eleven",
+      "text":"7 Eleven"
+    },
+    {
+      "id":"farmacias-ahorro",
+      "text":"Farmacias del Ahorro"
+    },
+    {
+      "id":"farmacias-benavides",
+      "text":"Farmacias Benavides"
+    },
+    {
+      "id":"bodega-aurrera",
+      "text":"Bodega Aurrera"
+    },
+    {
+      "id":"superama",
+      "text":"Superama"
+    },
+    {
+      "id":"sams-club",
+      "text":"Sams Club"
+    },
+    {
+      "id":"el-asturiano",
+      "text":"El Asturiano"
+    },
+    {
+      "id":"circulo-k",
+      "text":"Círculo K"
+    },
+    {
+      "id":"airpack",
+      "text":"Airpack"
+    },
+    {
+      "id":"farmacias-guadalajara",
+      "text":"Farmacias Guadalajara"
+    },
+    {
+      "id":"kiosko",
+      "text":"Kiosko"
+    },
+    {
+      "id":"extra",
+      "text":"Extra"
+    },
+    {
+      "id":"waldos",
+      "text":"Waldos"
+    },
+    {
+      "id":"alsuper",
+      "text":"Alsuper"
+    },
+    {
+      "id":"one",
+      "text":"One"
+    },
+    {
+      "id":"prendamex",
+      "text":"Prendamex"
+    },
+    {
+      "id":"gestopago",
+      "text":"Gesto pago"
+    },
+    {
+      "id":"maxilana",
+      "text":"Maxilana"
+    },
+    {
+      "id":"atiendas",
+      "text":"A Tiendas"
+    },
+    {
+      "id":"te-creemos",
+      "text":"Te Creemos"
+    },
+    {
+      "id":"multirecargas",
+      "text":"Multirecargas"
+    },
+    {
+      "id":"pagorapido",
+      "text":"Pago Rapido"
+    },
+    {
+      "id":"redefectiva",
+      "text":"Red Efectiva"
+    },
+    {
+      "id":"farmacias-bazar",
+      "text":"Farmacias Bazar"
+    },
+    {
+      "id":"financiera-cefemex",
+      "text":"Financiera Cefemex"
+    },
+    {
+      "id":"petro-fe",
+      "text":"Petro-Fé"
+    },
+    {
+      "id":"laoriginal",
+      "text":"La Original"
+    },
+    {
+      "id":"caja-solidaria-tamaulipas",
+      "text":"Tamaulipas"
+    },
+    {
+      "id":"caja-cerro-silla",
+      "text":"Caja Cerro de la Silla"
+    },  
+    {
+      "id":"especias-moy",
+      "text":"Especias Moy"
+    },
+    {
+      "id":"mi-adelanto",
+      "text":"Mi Adelanto"
+    },
+    {
+      "id":"venayuda",
+      "text":"Ven Ayuda"
+    },
+    {
+      "id":"grupo-pawn",
+      "text":"Grupo Pawn"
+    },
+    {
+      "id":"paso-seguro",
+      "text":"Paso Seguro"
+    },
+    {
+      "id":"servicios-prendarios-sureste",
+      "text":"Servicios Prendarios del Sureste"
+    },
+    {
+      "id":"indigo",
+      "text":"Indigo"
+    },
+    {
+      "id":"superprestamos-premier",
+      "text":"Superprestamos Premier"
+    },
+    {
+      "id":"torcam",
+      "text":"Torcam"
+    },
+    {
+      "id":"akala",
+      "text":"Akala"
+    },
+    {
+      "id":"dnu",
+      "text":"DNU"
+    },
+    {
+      "id":"servimoney",
+      "text":"Servimoney"
+    },
+    {
+      "id":"financiera-forjadores",
+      "text":"Financiera Forjadores"
+    },
+    {
+      "id":"grupo-aguila",
+      "text":"Grupo Águila"
+    },
+    {
+      "id":"alamano",
+      "text":"Alamano"
+    },
+    {
+      "id":"el-gallo-de-la-laguna",
+      "text":"El Gallo de la Laguna"
+    },
+    {
+      "id":"mexamed",
+      "text":"Mexamed"
+    },
+    {
+      "id":"grupo-blyska",
+      "text":"Grupo Blyska"
+    },
+    {
+      "id":"peso-facil",
+      "text":"Peso Fácil"
+    },
+    {
+      "id":"gwv-inversiones",
+      "text":"GWV Inversiones"
+    }  
+  ]
+
+}

@@ -1,0 +1,42 @@
+header.Header
+  .Header-content
+    
+    //- Select de idiomas y paises
+    .SelectBoxes
+      .ReservationNumber
+          .ReservationNumber__content 
+            span Reserva: LRK6-3907
+      //Select de paises
+      .Select.Select--paises
+        select#paises(name='countries')
+          option(value="br", data-imagesrc="img/blank.gif", data-imagecss="band br", data-title="Brasil") BRA
+          option(value="arg", data-imagesrc="img/blank.gif", data-imagecss="band arg", data-title="Argentina") ARG
+          option(value="pe", data-imagesrc="img/blank.gif", data-imagecss="band pe", data-title="Perú") PER
+          option(value="ca", data-imagesrc="img/blank.gif", data-imagecss="band ca", data-title="Canadá") CAN
+          option(value="co", data-imagesrc="img/blank.gif", data-imagecss="band co", data-title="Colombia") COL
+          option(value="cr", data-imagesrc="img/blank.gif", data-imagecss="band cr", data-title="Costa Rica") COS
+          option(value="sal", data-imagesrc="img/blank.gif", data-imagecss="band sal", data-title="El Salvador") SAL
+          option(value="us", data-imagesrc="img/blank.gif", data-imagecss="band us", data-title="USA") USA
+          option(value="gua", data-imagesrc="img/blank.gif", data-imagecss="band gua", data-title="Guatemala") GUA
+          option(value="hn", data-imagesrc="img/blank.gif", data-imagecss="band hn", data-title="Honduras") HON
+          option(value="mex", data-imagesrc="img/blank.gif", data-imagecss="band mex", data-title="México") MEX
+          option(value="nic", data-imagesrc="img/blank.gif", data-imagecss="band nic", data-title="Nicaragua") NIC
+          option(value="pa", data-imagesrc="img/blank.gif", data-imagecss="band pa", data-title="Panamá") PAN
+          option(value="al", data-imagesrc="img/blank.gif", data-imagecss="band al", data-title="Alemania") AL
+          option(value="aus", data-imagesrc="img/blank.gif", data-imagecss="band aus", data-title="Australia") AUS
+          option(value="esp", data-imagesrc="img/blank.gif", data-imagecss="band esp", data-title="España") ESP
+          option(value="hol", data-imagesrc="img/blank.gif", data-imagecss="band hol", data-title="Holanda") HOL
+          option(value="ecu", data-imagesrc="img/blank.gif", data-imagecss="band ecu", data-title="Ecuador") ECU
+      //Select de idiomas
+      //- .Select.Select--idiomas
+      //-   select#idiomas(name='idioma')
+      //-     option(value='por') Português
+      //-     option(value='es') Español
+      //-     option(value='en') Inglés
+      //-     option(value='al') Alemán
+    //- Tabs
+    .Header-tabs
+      a.button.is-active(href='#tab-internet', title="Banca por internet") Transferencia Bancaria
+      a.button(href='#tab-efectivo', title="Pagar en efectivo") Pagar en Efectivo
+      .clearfix
+    

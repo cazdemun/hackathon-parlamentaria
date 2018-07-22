@@ -1,0 +1,23 @@
+//AutenticacionCelular
+.AutenticacionCelular
+  .AutenticacionCelular-title Ingresa tu celular
+  .AutenticacionCelular-content
+    //Formulario código de pago
+    form#form_codigo_pago_internet.form_obtener_codigo_pago(action='#', method='post')
+      select#select_codigo_paises_internet(name='telef')
+        option(value='') (+51)
+        option(value='') (+51)
+        option(value='') (+55) 
+        option(value='') (+1-011)
+        option(value='') (+57) 
+        option(value='') (+503)
+        option(value='') (+1-011)
+        option(value='') (+502)
+        option(value='') (+504)
+        option(value='') (+52)
+        option(value='') (+507)
+      .box_celular_codigo_pago
+        input.celular(type='tel', name='ipt_celular_codigo_pago_internet', placeholder='Celular', maxlength='9')
+      input#cod1.enviar(type='submit', value='Obtén tu código de pago')
+    //Fin: Formulario código de pago
+//Fin:AutenticacionCelular

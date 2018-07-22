@@ -1,0 +1,24 @@
+//Ticket - Rapipago
+.Ticket.is-visible(data-nom-banco="rapipago")
+  //- .Ticket-guia 
+  //-   .guia-content Lea cuidadosamente las instrucciones de la transferencia para completar el pago. <br> Cualquier error puede provocar demoras en la acreditación del pago.
+  .Ticket-content
+    .Ticket-total
+      .Ticket-total-detalle
+        .row
+          .label.total Paga el valor exacto
+          .value.total $ 1.426,25
+    .Ticket-tiempo
+      .tiempo-mensaje Tienes:
+      .tiempo-reloj
+        i.icon-clock
+        span#timer_hor_1 2h
+        span.divisor :
+        span#timer_min_1(data-minutos='58') 58m
+        span.divisor :
+        span#timer_seg_1 24s
+      .tiempo-mensaje.tiempo-mensaje--bottom Paga antes del 20 oct 2018 - 23:35 hrs.
+  .Ticket-guia 
+    .guia-content Ubica las sucursales <span>RapiPago</span> más cercanas <a href="https://www.rapipago.com.ar/rapipagoWeb/index.php/red_de_agentes" target="_blank" class="is-underline">aquí</a>
+  include ../_envio-instrucciones-efectivo.pug
+  include ../_footer.pug

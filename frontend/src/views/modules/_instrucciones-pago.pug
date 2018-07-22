@@ -1,0 +1,89 @@
+//InstruccionesPago
+.InstruccionesPago
+  .InstruccionesPago-title Instruções de Pagamento
+  .InstruccionesPago-content
+    //- Itau
+    .main-content.personas(data-nom-entidad="itau")
+      .InstruccionesPago-guia Realize uma <span class="strong">"Transferência para Contas Itaú"</span> (de conta corrente para conta corrente) em nome de <span class="strong">SafetyPay Brasil Serviços de Pagamentos Ltda</span> na <span class="strong">conta e agência</span> informadas abaixo:
+      
+      // Porpuesta 1  
+      .InstruccionesPago-listaPasos.opcion-1
+        .paso-item
+          .BoxReferenciaInterfaz
+            .BoxReferenciaInterfazaz-content
+              .row
+                .col-a Agência
+                .col-b
+                  .num-agencia 2980
+                  .block-cuenta-corriente
+                    span.texto Conta corrente:
+                    .num-cuenta-corriente 21880
+                    span.texto.divisor -
+                    .suf-cuenta-corriente 0
+              .row.mobile
+                .col-a
+                  span.texto Conta corrente:
+                .col-b
+                  .num-cuenta-corriente 21880
+                  span.texto.divisor -
+                  .suf-cuenta-corriente 0
+              .row
+                .col-a Valor da transferência: RS
+                .col-b
+                  .valor-transferencia 6.999,76
+              .row
+                .col-a Identificação no extrato:
+                .col-b
+                  .num-identificacion 39432
+      
+      // Propuesta 2          
+      .InstruccionesPago-listaPasos.opcion-2.is-visible
+        .paso-item Digite o código de identificação <span class="strong">39432</span> no campo <span class="strong">"Identificação no extrato"</span> no seu Internet Banking, conforme imagem abaixo:
+          .BoxReferenciaInterfaz
+            .BoxReferenciaInterfaz-title
+              span.strong Conta a ser creditada:
+            .BoxReferenciaInterfazaz-content
+              .row
+                .col-a
+                  span.subtitulo buscar na lista de favorecidos
+                .col-b
+                  span.subtitulo buscar na lista de favorecidos
+              .row
+                .col-a
+                  span.texto Agência:
+                .col-b
+                  .num-agencia 2980
+                  .block-cuenta-corriente
+                    span.texto Conta corrente:
+                    .num-cuenta-corriente 21880
+                    span.texto.divisor -
+                    .suf-cuenta-corriente 0
+              .row.mobile
+                .col-a
+                  span.texto Conta corrente:
+                .col-b
+                  .num-cuenta-corriente 21880
+                  span.texto.divisor -
+                  .suf-cuenta-corriente 0
+              .row
+                .col-a Valor da transferência: RS
+                .col-b
+                  .valor-transferencia 6.999,76
+              .row
+                .col-a Identificação no extrato:
+                .col-b
+                  .num-identificacion 39432
+              .row
+                .col-a Transfer
+                .col-b.large
+                  .inner-row
+                    input(type="radio", name="transfer")
+                    span.texto Hoje
+                  .inner-row
+                    input(type="radio", name="transfer")
+                    span.texto <span>Agenda para</span> <div class="inputbox"></div> <span>/</span> <div class="inputbox"></div> <span>/</span> <div class="inputbox"></div> <div class="block-calendario"><i class="icon-calendario"></i> <span class="formato-fecha">dd/mm/aa</span></div>
+              .row.last-child
+                .col-full
+                  span.text Senha do cartão com 6 dígitos:
+                  .inputbox.password ......
+                     

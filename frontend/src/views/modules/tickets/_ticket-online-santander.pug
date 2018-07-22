@@ -1,0 +1,12 @@
+//Ticket - Banco Santander
+.Ticket.is-visible(data-nom-entidad="banco-santander")
+  .OneStepPaymentTicket__content
+    .OneStepPaymentTicket__summary
+        include ../../modules/one-step-ticket/payment-summary--without-fee.pug
+    include ../../modules/one-step-ticket/expiration-time-tiny.pug
+      
+  //- .OneStepPaymentTicket__payButton
+  //-   //- Config Button
+  //-   - var text_button = 'Pagar'
+  //-   - var button_classes = ''
+  //-   include ../../atoms/simple-button--disabled.pug

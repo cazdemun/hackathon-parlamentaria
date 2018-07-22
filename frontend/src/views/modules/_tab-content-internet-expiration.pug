@@ -1,0 +1,29 @@
+//- Si la variable recuperación no está definida, la variable la ponemos como un sring vacío
+- if (typeof(clase_recuperacion) === 'undefined'){
+  - var clase_recuperacion = "";
+-}
+
+
+//Contenido Banca por Internet
+section.tab-content.banca-por-internet.is-active#tab-internet
+  //- .TabsInternos
+    //- a.tab_button.btn_personas.is-active(href="#", data-tab-name="personas") Pagamento Online
+    //- a.tab_button.btn_empresas(href="#", data-tab-name="empresas") Empresas
+  .MyBankSearchSelect.is-hide
+    .MyBankSearchSelect__content
+      select.MyBankSearchSelect__list
+
+  .TabsInternos-content.is-active
+    include ./_slide-financieras-internet-actionDisabled.pug
+    include ./formularios-datos/_formulario-datos-online-disabled.pug
+    
+    //ProcedimientoPago
+    .ProcedimientoPago      
+      include ./_ticket-pago-internet-expiration.pug
+      //- include ./_instrucciones-pago.pug
+      //- include ./_waiting-state.pug
+    //-   include ./_envio-instrucciones-internet.pug
+    //-   include ./_footer.pug
+  //- .TabsInternos-content.TabsInternos-content--empresas
+  //-   include ./_sugerencia-bancos-empresas.pug
+//Fin: Contenido Banca por Internet

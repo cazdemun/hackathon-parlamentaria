@@ -1,0 +1,42 @@
+//EnvioInstrucciones
+.EnvioInstrucciones
+  .EnvioInstrucciones-content
+    button.BotonPrincipal.BotonPrincipal--bancaInternet(href="#")
+      | Realizar transferencia
+      i.iconb_circleright
+  .OneStepPaymentTicket__footer
+    //- .OneStepPaymentTicket__footer__info
+    .OneStepPaymentTicket__footer__terms
+      span.checkbox <input type="checkbox" checked="checked"> 
+      span Acepto <a href="#">términos y condiciones</a> y <a href="#">políticas de privacidad</a>.
+      
+    if !no_convenience_fee
+      .OneStepPaymentTicket__convenienceFee
+        span El total incluye $1,20 por costos operativos.
+      
+    //- .EnvioInstrucciones-botones
+    //-   p.texto-instrucciones Enviar instruções via
+    //-   // Instrucciones por celular
+    //-   form#frm_instr_celular_internet.frm_instr_celular(action='#', method='post')
+    //-     .BoxInput(title='Ingresar celular')
+    //-       input(type='tel', name='ipt_instr_celular_internet', class="InputText InputText--celular", placeholder='Celular', maxlength='9')
+    //-       .BoxButton
+    //-         button.BotonSubmit.BotonSubmit--celular(type="submit")
+            
+    //-   // Instrucciones por correo electrónico
+    //-   form#frm_instr_correo_internet.frm_instr_email(action='#', method='post')
+    //-     .BoxInput(title='Ingresar correo')
+    //-       input(type='email', name='ipt_instr_correo_internet', class="InputText InputText--correo", placeholder='Email', maxlength='20')
+    //-       .BoxButton
+    //-         button.BotonSubmit.BotonSubmit--correo(type="submit")
+            
+      //- Imprimir
+      //- .BoxInput(title='Imprimir')
+      //-   .BoxButton
+      //-     button.BotonSubmit.BotonSubmit--impresion
+      .clearfix
+
+    //- .EnvioInstrucciones-logo
+    //-   .EnvioInstrucciones-logoWrapper
+    //-     img(src="images/logo-safetypay-small.png", alt="Vía SafetyPay")
+//Fin:EnvioInstrucciones

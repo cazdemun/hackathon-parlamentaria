@@ -1,0 +1,52 @@
+//Ticket - Bradesco - Opción 1
+.Ticket(data-nom-entidad="banco-nacion")
+  .Ticket-guia 
+    .guia-content Lee cuidadosamente las instrucciones para completar el pago. No se procesará tu compra si pagas fuera de tiempo o si los datos en la transferencia son incorrectos. Solo se procesarán transferencias desde Banco Nación.
+  .Ticket-content
+    .Ticket-total
+      .Ticket-total-detalle
+        .row
+          .label.total Transfiere el valor exacto
+          if montoMayor=="60.426,15"
+            .value.total $ 60.426,15
+          else
+            .value.total $ 1.426,25
+    .Ticket-tiempo
+      .tiempo-mensaje Tienes:
+      .tiempo-reloj
+        i.icon-clock
+        span#timer_hor_1 2h
+        span.divisor :
+        span#timer_min_1(data-minutos='58') 58m
+        span.divisor :
+        span#timer_seg_1 24s
+      .tiempo-mensaje.tiempo-mensaje--bottom Paga antes del 20 Oct 2018 - 23:35 hrs.
+  .Ticket-guia 
+    .guia-content Copia la siguiente información para realizar la transferencia.
+  .row
+    .Ticket-content-instrucciones
+      //- .Ticket-total.instrucciones.instrucciones-one
+      //-         span.tiempo-mensaje Banco:
+      //-         span.tiempo-mensaje Nación
+      .Ticket-tiempo.instrucciones.instrucciones-one
+              span.tiempo-mensaje Cuenta Única: 
+              input(name="168120443" onfocus="if (this.value=='168-12044/3') this.value = '168-12044/3'" type="text" value="168-12044/3" style="border: none;").tiempo-mensaje
+              p.copy-image 
+                img(src="img/copy-icon.png") 
+      .Ticket-tiempo.instrucciones.instrucciones-two
+                span.tiempo-mensaje CUIT/DNI:            
+                span.tiempo-mensaje 33714595569
+      //- .Ticket-total.instrucciones.instrucciones-three
+      //-         span.tiempo-mensaje CBU: 
+      //-         input(name="0720168020000001204436" onfocus="if (this.value=='0720168020000001204436') this.value = '0720168020000001204436'" type="text" value="0720168020000001204436" style="border: none;").tiempo-mensaje
+      //-         p.copy-image 
+      //-           img(src="img/copy-icon.png")                          
+    .Ticket-content-instrucciones        
+      .Ticket-total.instrucciones.instrucciones-three
+              span.tiempo-mensaje Beneficiario:
+              span.tiempo-mensaje WEBPAY SRL
+      .Ticket-tiempo.instrucciones.instrucciones-four
+              span.tiempo-mensaje Referencia:
+              input(name="12345678" onfocus="if (this.value=='12345678') this.value = '12345678'" type="text" value="12345678" style="border: none;").tiempo-mensaje
+              p.copy-image 
+                img(src="img/copy-icon.png")

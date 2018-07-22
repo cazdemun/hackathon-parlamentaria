@@ -1,0 +1,77 @@
+/*---------------------------------------------------------------------------*
+ * MainContent
+----------------------------------------------------------------------------*/
+.MainContent {
+  // padding: 10px 15px 0 15px;  
+  // display: none;
+  max-width: 960px;
+  margin: auto;
+  // background: #fff;
+  @include breakpoint(phablet) {
+    // padding-left: 38px;    
+  }
+  &.is-visible {
+    display: block;
+  }
+  &-header {
+  }
+  &-content {
+    max-width: 800px;
+    margin: auto;
+  }
+.bs-sidebar .nav > .active > ul {
+  display: block;
+  margin-bottom: 8px;
+}
+
+text.shadow {
+  stroke: white;
+  stroke-width: 2.3px;
+  opacity: 0.5;
+}
+
+.node {
+  cursor: pointer;
+  circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+  }
+  text {
+    font: 18px sans-serif;
+  }
+}
+
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-dasharray: 4;
+  stroke-width: 1.5px;
+}
+}
+
+.tip {
+  position: absolute;
+  background: #333;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  font-size:14px;
+  max-width:360px;
+  p{
+    margin:0;
+    font-size:13px;
+  }
+  @include breakpoint(phablet) {
+    max-width:400px;
+  }
+}
+
+/*---------------------------------------------------------------------------*
+* Fin:MainContent
+----------------------------------------------------------------------------*/
