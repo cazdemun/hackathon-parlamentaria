@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-explore',
@@ -16,7 +17,8 @@ export class ExploreComponent implements OnInit {
   public arrayProjects;
   
   constructor(private route:ActivatedRoute
-    , private http: HttpClient) { 
+    , private http: HttpClient,
+    private router: Router) { 
       this.route.queryParams
       .subscribe(params => {
         console.log(params);
@@ -27,6 +29,7 @@ export class ExploreComponent implements OnInit {
     this.http.get(this.url+'getactiveProjects')
     .subscribe( (response:any) => {
       this.arrayProjects = response.value;
+      [,...this.arrayProjects] = [...this.arrayProjects];
       console.log(this.arrayProjects);
       }
     );
@@ -35,6 +38,25 @@ export class ExploreComponent implements OnInit {
   ngOnInit() {
   }
 
+  agree(e,i){
+    let json = {value:e, id:i, dni:this.dni};
+    this.http.post(this.url + 'voteProject', json)
+    .subscribe( (response:any) => {
+      console.log(response);
+      this.http.get(this.url+'getactiveProjects')
+      .subscribe( (response:any) => {
+        this.arrayProjects = response.value;
+        [,...this.arrayProjects] = [...this.arrayProjects];
+        }
+      );
+      // this.router.navigate(['/explore'], {
+      //   queryParams:{
+      //     dni: this.dni,
+      //     nombre: this.nombre
+      //   }});
+      }
+    );
+  }
   changePage(){
     // this.router.navigate(['/explorer'], {
     // queryParams:{

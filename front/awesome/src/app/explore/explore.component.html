@@ -1,24 +1,45 @@
-<header>
-    <h1>Estado de tú proyecto de Ley</h1>
+<header class="header">
+    <h1>Estado Explorar</h1>
 </header>
 <div class="explorer-container">
-        <div *ngFor="let projects of arrayProjects; let i = index" (click)="collapsible(i)">
-            <mat-accordion>
-                <mat-expansion-panel (opened)="panelOpenState = true"
-                (closed)="panelOpenState = false">
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        {{projects.title}}
-                    </mat-panel-title>
-                    <mat-panel-description>
-                        <i class="material-icons">thumb_up</i>
-                        <i class="material-icons">thumb_down</i>
-                    </mat-panel-description>
-                </mat-expansion-panel-header>
-             
-                </mat-expansion-panel>
-            </mat-accordion>
+    <div *ngFor="let projects of arrayProjects; let i = index">
+        <div class="container-projects">
+            <div class="title">
+                {{projects.title}}
+            </div>
+            <div class="votaciones">
+                <div class="like" (click)="agree(1, projects.id)">
+                    <i class="material-icons">thumb_up</i>
+                    {{projects.votes[1]}}
+                </div>
+                <div class="dislike"(click)="agree(2, projects.id)">
+                    <i class="material-icons">thumb_down</i>
+                    {{projects.votes[2]}}
+                </div>
+            </div>
         </div>
+        </div>
+    </div>
+    
+    <!-- <div *ngFor="let projects of arrayProjects; let i = index">
+        <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{projects.title}}
+                </mat-panel-title>
+                <mat-panel-description>
+                    <i class="material-icons">thumb_up</i>
+                    <i class="material-icons">thumb_down</i>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+                Positivos: {{projects.votes[1]}}
+                <br>
+                Negativos: {{projects.votes[2]}}
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div> -->
 
     <!-- <div class="row">
         <div class="col s12 m12">
@@ -41,7 +62,5 @@
         </div>
     </div>
     <button mat-button>Click me!</button> -->
-
-</div>
 
           

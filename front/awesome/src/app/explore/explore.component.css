@@ -1,0 +1,49 @@
+.header h1{
+    padding-left: 30px;
+}
+
+.explorer-container{
+    width: 100%;
+    border: 1px solid gray;
+    margin: 0 auto;
+    max-width: 1300px;
+    min-width: 320px;
+}
+
+.container-projects{
+    display: flex;
+}
+
+.title{
+    width: 85%;
+    border: 1px solid gray;
+    padding: 13px;
+    min-height: 30px;
+}
+
+.votaciones{
+    display: flex;
+    width: 15%;
+}
+
+
+.like, .dislike{
+    cursor: pointer;
+    width: 50%;
+    border:1px solid gray;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.like:hover, .dislike:hover{
+    background: gray;
+}
+
+
+.like i, .dislike i{
+    color: black;
+}
