@@ -17,6 +17,7 @@ export class ExploreComponent implements OnInit {
   public arrayProjects;
 
   public pdfSrc:string;
+  public currentProject: any;
   
   constructor(private route:ActivatedRoute
     , private http: HttpClient,
@@ -38,13 +39,24 @@ export class ExploreComponent implements OnInit {
     }
 
   ngOnInit() {
+
+  }
+
+  signDocument(){
+    let json = { id:this.currentProject.id, dni:this.dni};
+    this.http.post(this.url + 'signProject', json)
+    .subscribe( (response:any) => {
+      console.log(response);
+
+      );
   }
 
   public statusPdf: boolean = true;
-  openPdf(e){
-    this.pdfSrc = "";
+  openPdf(e, i){
     this.statusPdf = !this.statusPdf;       
     this.pdfSrc = e;
+    this.currentProject = i;
+    console.log(this.currentProject);
   }
   
   agree(e,i){

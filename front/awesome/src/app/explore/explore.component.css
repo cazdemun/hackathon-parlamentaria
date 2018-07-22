@@ -96,3 +96,39 @@ body{
     visibility: 1;
 }
 
+.data-project{
+    weight: 100vh;
+    height: 100%;
+    position: absolute;    
+    top: 0;
+    left: 0;
+    width: 40%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.pdfcont{
+    width: 60%;
+    position: absolute;
+    right: 0;
+}
+
+.data-info{
+    border:1px solid blue;
+}
+
+.btn{
+    height: 54px;
+    line-height: 54px;
+    font-size: 15px;
+    padding: 0 28px;
+}
+
+.btn-red{
+    background-color: #B71C1C;
+    color:white;
+}

@@ -6,7 +6,7 @@
         <div class="explorer-container"  [ngClass]="statusPdf ? 'show' : 'hide'">
             <div *ngFor="let projects of arrayProjects; let i = index" >
                 <div class="container-projects">
-                    <div class="title" (click)="openPdf(projects.uri)">
+                    <div class="title" (click)="openPdf(projects.uri, projects)">
                         {{projects.title}}
                     </div>
                     <div class="votaciones">
@@ -24,12 +24,37 @@
             </div>
             <div class="pdf-container"  [ngClass]="statusPdf ? 'hide-pdf' : 'show-pdf'">
             <div (click)="openPdf(null)" style="position:absolute; right:15; left:15">
-                <span>X</span>
+                <span>XXXXX</span>
             </div>
-            <pdf-viewer [src]="pdfSrc" 
-            [render-text]="true"
-            style="display: block;"
-            ></pdf-viewer>
+            <div class="data-project">
+                <div class="data-info">
+                    Título: 
+                    <br>{{currentProject.title}}
+                    <br>
+                    Id Documento: {{currentProject.id}}
+                    <br>
+                    Hash Documento: {{currentProject.hash}}
+                    <br>
+                    Promotores: {{currentProject.promotors}}
+                    <br>
+                    Firmas: {{currentProject.signature}}
+                    <br>
+                    Signers: {{currentProject.signers}}
+                    <br>
+                    Ubigeo: {{currentProject.ubigeo}}
+                    <br>
+                    Url Documento: {{currentProject.uri}}
+                    <br>
+                    Nro Votos: {{currentProject.votes[3]}}
+                </div>
+                <button (click)="signDocument()" class="btn btn-red">Firmar documento</button>
+            </div>
+            <div class="pdfcont">
+                <pdf-viewer [src]="pdfSrc" 
+                [render-text]="true"
+                style="display: block;"
+                ></pdf-viewer>
+            </div>
         </div>  
     </div>
 </div>
