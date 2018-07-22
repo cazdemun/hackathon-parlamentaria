@@ -1,5 +1,40 @@
-<header>
+<header style="position: absolute; margin:30px">
     <h1>Bienvenido {{nombre}}!</h1>
 </header>
 
+<div class="MainContent">   
+    <!-- <div class="container">
+        <div class="row">
+            <div *ngFor="let options of menuOptions; let i = index" class="col s12 m4">
+                <div class="card" (click) = "selectOption(i)">
+                    <div class="card-image">
+                        <img src="{{options.img}}">
+                    </div>
+                    <div class="card-content">
+                        <h3>{{options.title}}</h3>{{options.description}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
+<div class="content">
+    <mat-grid-list class="my-grid-tile" cols="3" rowHeight="90px" gutterSize ="20px" role="list">
+        <mat-grid-tile class="my-grid-tile"
+        *ngFor="let options of menuOptions; let i = index"
+        [colspan]="1"
+        [rowspan]="3"
+        [style.background]="white" (click)="selectOption(i)">
+        <div>
+            <img mat-card-image src="{{options.img}}">
+        </div>
+        <div>
+            <h3>{{options.title}}</h3>{{options.description}}
+        </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+</div>
+    
+
+      

@@ -1,0 +1,47 @@
+<header>
+    <h1>Estado de tú proyecto de Ley</h1>
+</header>
+<div class="explorer-container">
+        <div *ngFor="let projects of arrayProjects; let i = index" (click)="collapsible(i)">
+            <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        {{projects.title}}
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        <i class="material-icons">thumb_up</i>
+                        <i class="material-icons">thumb_down</i>
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+             
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+
+    <!-- <div class="row">
+        <div class="col s12 m12">
+            <ul class="collapsible">
+                <li *ngFor="let projects of arrayProjects; let i = index" (click)="collapsible(i)">
+                    <div class="collapsible-header">
+                        {{projects.title}}
+                        <span class="badge">
+                            <i class="material-icons">thumb_up</i>
+                            <i class="material-icons">thumb_down</i>
+                        </span>
+                    </div>
+                    <div class="collapsible-body">
+                        <p>Adherentes: Pedro Sanchez, Andre Neyra, María Gutierrez</p>
+                        <p>Aprobado por: Juan Mendez</p>
+                        <p>Fecha de aprobación: 22/07/2018</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button mat-button>Click me!</button> -->
+
+</div>
+
+          

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
-import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { Router} from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 @Component({

@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* @import "assets/plugins/materialize/css/materialize.min.css"; */
+
+/* @import "assets/plugins/app.css"; */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 html, body{
     width: 100%;
@@ -9,7 +14,18 @@ html, body{
     margin: 0;
 }
 
+header{
+    margin: 30px;
+    position: absolute;
+}
 
+.explorer-container{
+    margin-top: 50px;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Roboto', sans-serif; }

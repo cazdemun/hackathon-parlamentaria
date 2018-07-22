@@ -2,21 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
-
 @Component({
-  selector: 'app-explorer',
-  templateUrl: './explorer.component.html',
-  styleUrls: ['./explorer.component.css']
+  selector: 'app-explore',
+  templateUrl: './explore.component.html',
+  styleUrls: ['./explore.component.css']
 })
-export class ExplorerComponent implements OnInit {
-
+export class ExploreComponent implements OnInit {
   public nombre:string;
   public dni: string;
 
   public url: string = "https://hackathon-server-cazdemun.c9users.io/";
-
+  public panelOpenState = false;
   public arrayProjects;
-
+  
   constructor(private route:ActivatedRoute
     , private http: HttpClient) { 
       this.route.queryParams

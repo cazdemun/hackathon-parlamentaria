@@ -1,8 +1,16 @@
 <div class="home">
     <div class="opacity"></div>
     <div class="container">
-        <p>INSERTAR DNI</p>
+        <!-- <p>INSERTAR DNI</p>
         <input type="text" [value] = "76717491" (input)="updateValue($event)"><br>
-        <button ion-button class="btn-login" (click)="login()">Login</button>
+        <button ion-button class="btn-login" (click)="login()">Login</button> -->
+        <div class="example-container">
+            <mat-form-field type="text" (input)="updateValue($event)">
+                <input matInput placeholder="INSERTAR DNI">
+            </mat-form-field>
+            <div class="button-row">
+                <button mat-raised-button color="primary" (click)="login()" style="width:100%">Entrar</button>
+            </div>
+        </div>
     </div>
 </div>
