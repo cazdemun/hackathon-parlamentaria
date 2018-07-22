@@ -1,6 +1,7 @@
 /*---------------------------------------------------------------------------*
  * Normalize
 ----------------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 progress, sub, sup {
   vertical-align: baseline; }
 
@@ -7219,6 +7220,131 @@ a[href^="tel"] {
   color: inherit;
   text-decoration: none; }
 
+.is-visible {
+  display: block; }
+
+#fountainG {
+  position: relative;
+  width: 90px;
+  height: 11px;
+  margin: auto;
+  display: none; }
+
+.fountainG {
+  position: absolute;
+  top: 0;
+  background-color: #f44336;
+  width: 11px;
+  height: 11px;
+  animation-name: bounce_fountainG;
+  -o-animation-name: bounce_fountainG;
+  -ms-animation-name: bounce_fountainG;
+  -webkit-animation-name: bounce_fountainG;
+  -moz-animation-name: bounce_fountainG;
+  animation-duration: 2.08s;
+  -o-animation-duration: 2.08s;
+  -ms-animation-duration: 2.08s;
+  -webkit-animation-duration: 2.08s;
+  -moz-animation-duration: 2.08s;
+  animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-direction: normal;
+  -o-animation-direction: normal;
+  -ms-animation-direction: normal;
+  -webkit-animation-direction: normal;
+  -moz-animation-direction: normal;
+  transform: scale(0.3);
+  -o-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  border-radius: 7px;
+  -o-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px; }
+
+#fountainG_1 {
+  left: 0;
+  animation-delay: 0.05s;
+  -o-animation-delay: 0.05s;
+  -ms-animation-delay: 0.05s;
+  -webkit-animation-delay: 0.05s;
+  -moz-animation-delay: 0.05s; }
+
+#fountainG_2 {
+  left: 11px;
+  animation-delay: 1.04s;
+  -o-animation-delay: 1.04s;
+  -ms-animation-delay: 1.04s;
+  -webkit-animation-delay: 1.04s;
+  -moz-animation-delay: 1.04s; }
+
+#fountainG_3 {
+  left: 22px;
+  animation-delay: 1.25s;
+  -o-animation-delay: 1.25s;
+  -ms-animation-delay: 1.25s;
+  -webkit-animation-delay: 1.25s;
+  -moz-animation-delay: 1.25s; }
+
+#fountainG_4 {
+  left: 34px;
+  animation-delay: 1.46s;
+  -o-animation-delay: 1.46s;
+  -ms-animation-delay: 1.46s;
+  -webkit-animation-delay: 1.46s;
+  -moz-animation-delay: 1.46s; }
+
+#fountainG_5 {
+  left: 45px;
+  animation-delay: 1.66s;
+  -o-animation-delay: 1.66s;
+  -ms-animation-delay: 1.66s;
+  -webkit-animation-delay: 1.66s;
+  -moz-animation-delay: 1.66s; }
+
+#fountainG_6 {
+  left: 56px;
+  animation-delay: 1.87s;
+  -o-animation-delay: 1.87s;
+  -ms-animation-delay: 1.87s;
+  -webkit-animation-delay: 1.87s;
+  -moz-animation-delay: 1.87s; }
+
+#fountainG_7 {
+  left: 67px;
+  animation-delay: 2.08s;
+  -o-animation-delay: 2.08s;
+  -ms-animation-delay: 2.08s;
+  -webkit-animation-delay: 2.08s;
+  -moz-animation-delay: 2.08s; }
+
+#fountainG_8 {
+  left: 79px;
+  animation-delay: 2.29s;
+  -o-animation-delay: 2.29s;
+  -ms-animation-delay: 2.29s;
+  -webkit-animation-delay: 2.29s;
+  -moz-animation-delay: 2.29s; }
+
+@keyframes bounce_fountainG {
+  0% {
+    transform: scale(1);
+    background-color: #f44336; }
+  100% {
+    transform: scale(0.3);
+    background-color: white; } }
+
+.validate--button .ready-reload {
+  display: none;
+  text-align: center;
+  margin-top: 0;
+  font-size: 13px; }
+
 /*---------------------------------------------------------------------------*
  * Start: Helper clearfix
 ----------------------------------------------------------------------------*/
@@ -7286,54 +7412,59 @@ a[href^="tel"] {
 /*---------------------------------------------------------------------------*
  * MainContent
 ----------------------------------------------------------------------------*/
-.MainContent {
-  max-width: 960px;
-  margin: auto; }
-  .MainContent.is-visible {
-    display: block; }
-  .MainContent-content {
-    max-width: 800px;
-    margin: auto; }
-  .MainContent .bs-sidebar .nav > .active > ul {
-    display: block;
-    margin-bottom: 8px; }
-  .MainContent text.shadow {
-    stroke: white;
-    stroke-width: 2.3px;
-    opacity: 0.5; }
-  .MainContent .node {
-    cursor: pointer; }
-    .MainContent .node circle {
-      fill: #fff;
-      stroke: steelblue;
-      stroke-width: 1.5px; }
-    .MainContent .node text {
-      font: 18px sans-serif; }
-  .MainContent .link {
-    fill: none;
-    stroke: #000;
-    stroke-dasharray: 4;
-    stroke-width: 1.5px; }
+.MainContent .row {
+  margin-bottom: 0; }
 
-.tip {
-  position: absolute;
-  background: #333;
-  color: white;
-  padding: 6px 10px;
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-  text-align: left;
-  top: 0;
-  left: 0;
-  visibility: hidden;
-  font-size: 14px;
-  max-width: 360px; }
-  .tip p {
-    margin: 0;
-    font-size: 13px; }
-  @media (min-width: 640px) {
-    .tip {
-      max-width: 400px; } }
+.MainContent .welcome {
+  margin-bottom: 3rem; }
+
+.MainContent .card {
+  height: 220px; }
+
+.MainContent .card-image {
+  top: -50px;
+  width: 50%;
+  margin: auto; }
+  .MainContent .card-image img {
+    margin: auto; }
+
+.MainContent .card-content {
+  top: -50px;
+  position: relative;
+  color: #B71C1C; }
+
+.MainContent .card-action {
+  top: -50px;
+  position: relative; }
+
+.MainContent h3 {
+  margin: 0; }
+
+.MainContent--upload .row {
+  margin-bottom: 0; }
+
+.MainContent--upload label {
+  font-size: 1rem; }
+
+.MainContent--upload .help {
+  font-size: 1rem;
+  color: #9e9e9e;
+  margin: 5px; }
+
+.MainContent--upload .firma {
+  display: block;
+  width: 300px;
+  margin: 10px auto; }
+
+.MainContent--list .project:hover {
+  text-decoration: underline; }
+
+.MainContent--list p {
+  margin: 0;
+  font-size: 13px; }
+
+.MainContent--list .collapsible-body {
+  padding: 1rem 2rem; }
 
 /*---------------------------------------------------------------------------*
 * Fin:MainContent
