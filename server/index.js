@@ -3,10 +3,16 @@ const app = express();
 
 const shIn = require('./shimInterface.js')
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 app.get('/', (req, res) => {
     console.log(shIn.createAccount());
-    res.send(JSON.stringify(shIn.createAccount()));
+    //res.send(JSON.stringify(shIn.createAccount()));
+    res.send('Connection Succeded');
 });
 
 
@@ -25,11 +31,18 @@ app.get('/api/createProject', (req, res) =>{
 
 app.get('/getActiveProjects', (req, res) =>{
     shIn.getActiveProjects()
-    .then(activeProjects => res.send(activeProjects));
+    .then(activeProjects => {
+        
+        let response = {
+            value: activeProjects
+        }
+        
+        res.json(response);
+    });
 });
 
 
-app.listen(3000, () => console.log('Listening on port 3000'));
+app.listen(8080, () => console.log('Listening on port 8080'));
 // app.post()
 // app.put()
 // app.delete()
